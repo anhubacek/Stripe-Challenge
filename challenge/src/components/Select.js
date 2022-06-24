@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../styles/select.module.css'
+import { DollarCircleFilled } from '@ant-design/icons'
 
 export default function Select(){
     return(
@@ -15,7 +16,24 @@ export default function Select(){
                     </div>
                 </div>
                 <div className={styles.NavBarRight}>
-                
+                <button className={styles.SelectButton}>
+                    <div className={styles.Icon}>
+                    <DollarCircleFilled />
+                    </div>
+                    <div className={styles.Text}>
+                        <h3>One-Time Payments</h3>
+                        <p>Digital of physical goods and services</p>
+                    </div>
+                </button>
+                <button className={styles.SelectButton}>
+                    <div className={styles.Icon}>
+                    <DollarCircleFilled />
+                    </div>
+                    <div className={styles.Text}>
+                        <h3>Recurring Payments</h3>
+                        <p>Subscription or SaaS business</p>
+                    </div>
+                </button>
                 </div>
             </div>
         <div className={styles.App}>

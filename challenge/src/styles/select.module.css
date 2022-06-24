@@ -3,11 +3,71 @@
    
 }
 .SelectPage .NavBarContent{
-    height: 200px;
+    height: 250px;
 }
 .SelectPage .App{
     height: 800px;
 }
 .SelectPage .App iframe{
     border: none;
+}
+.SelectPage .NavBarContent .NavBarRight{
+    display: flex;
+    flex-direction: row;
+    margin:40px;
+}
+.SelectPage .NavBarContent .NavBarRight .SelectButton{
+    display: flex;
+    flex-direction: row;
+    width: 380px;
+    background-color: white;
+    border: solid 1px var(--borderButtons1);
+    border-radius: 7px;
+    margin: 5px;
+    transition-delay: 250ms;
+    cursor: pointer;
+
+}
+.SelectPage .NavBarContent .NavBarRight .SelectButton .Text{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px;
+    
+}
+.SelectPage .NavBarContent .NavBarRight .SelectButton h3{
+    font-weight: 200;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    color: var(--textDefault);
+    text-align: left;
+}
+
+.SelectPage .NavBarContent .NavBarRight .SelectButton p{
+    font-weight: 200;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    color: var(--textGrey);
+    text-align: left;
+}
+
+.SelectPage .NavBarContent .NavBarRight .SelectButton .Icon{
+    position: relative;
+    top: 15px;
+    margin: 5px;
+    color: var(--textGrey);
+    font-size: 16px;
+   
+ }
+ .SelectPage .NavBarContent .NavBarRight .SelectButton:focus{
+    border: solid 3px rgb(91, 91, 180);
+    outline: solid 4px rgb(174, 228, 238);
+    
+ }
+
+
+.SelectPage .NavBarContent .NavBarLeft{
+    margin-left:30px;
 }
