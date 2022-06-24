@@ -1,0 +1,13 @@
+.SelectPage {
+    height: 1000px;
+   
+}
+.SelectPage .NavBarContent{
+    height: 200px;
+}
+.SelectPage .App{
+    height: 800px;
+}
+.SelectPage .App iframe{
+    border: none;
+}

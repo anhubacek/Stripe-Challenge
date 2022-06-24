@@ -1,9 +1,23 @@
-import './App.css';
+
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import RecurringPayments from './components/RecurringPayments';
+import OneTimePayments from './components/OneTimePayments';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <BrowserRouter>
+    <Routes>
+    <Route 
+            exact path='/recurringpayments'
+            element= {<RecurringPayments/>}
+            />
+    <Route 
+            exact path='/onetimepayments'
+            element= {<OneTimePayments/>}
+            />
+    </Routes>
+
+    </BrowserRouter>
   );
 }
 
