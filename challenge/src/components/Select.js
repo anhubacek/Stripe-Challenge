@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/select.module.css'
 import { DollarCircleFilled } from '@ant-design/icons'
 
 export default function Select(){
+
+    const [option, setOption] = useState({
+        oneTimePayments : false,
+        recurringPayments: false,
+    })
+
+    function handleFocus(e){
+        e.preventDefault(e);
+        setOption({
+            oneTimePayments : false,
+        recurringPayments: false,
+       [e.target.value]: true,
+        })
+        
+    }
     return(
         <div className={styles.SelectPage}>
             <div className={styles.NavBarContent}>
@@ -16,7 +31,7 @@ export default function Select(){
                     </div>
                 </div>
                 <div className={styles.NavBarRight}>
-                <button className={styles.SelectButton}>
+                <button className={styles.SelectButton} onFocus={handleFocus} value="oneTimePayments" >
                     <div className={styles.Icon}>
                     <DollarCircleFilled />
                     </div>
@@ -25,7 +40,7 @@ export default function Select(){
                         <p>Digital of physical goods and services</p>
                     </div>
                 </button>
-                <button className={styles.SelectButton}>
+                <button className={styles.SelectButton} onFocus={handleFocus} value="recurringPayments"  >
                     <div className={styles.Icon}>
                     <DollarCircleFilled />
                     </div>
@@ -37,7 +52,7 @@ export default function Select(){
                 </div>
             </div>
         <div className={styles.App}>
-            <iframe src="http://localhost:3001/recurringpayments" title="Recurring-Payments" width="100%" height="100%" scrolling='no'/>
+            <iframe src={option.oneTimePayments === true? "http://localhost:3001/onetimepayments": "http://localhost:3001/recurringpayments"} title="Recurring-Payments" width="100%" height="100%" scrolling='no'/>
         </div>
         
         </div>

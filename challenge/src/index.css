@@ -21,5 +21,7 @@ code {
   --borderButtons1:rgb(214, 211, 211);
   --textDefault: rgb(78, 78, 78);
   --textGrey: rgb(100, 100, 100);
+  --borderBlue: rgb(119, 119, 223);
+  --borderLight: rgb(183, 230, 238);
   
 }
