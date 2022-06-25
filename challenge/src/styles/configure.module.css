@@ -1,0 +1,87 @@
+.ConfigurePage {
+    height: 1000px;
+   
+}
+.ConfigurePage .NavBarContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 250px;
+    margin-left: 30px;
+}
+.ConfigurePage .App{
+    height: 800px;
+    background-color: var(--greyBackground);
+}
+.ConfigurePage .App iframe{
+    border: none;
+}
+.ConfigurePage .NavBarContent .NavBarLeft{
+    margin-top: 30px;
+}
+
+.ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 30px;
+    align-items: center;
+    margin-top: 0px; 
+}
+
+.ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading span{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading p{
+    margin: 0px 8px;
+    font-size: 15px;
+    color: var(--text-gray);
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.ConfigurePage .NavBarContent .NavBarRight{
+    display: flex;
+    margin-top:0px;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.ConfigurePage .NavBarContent .NavBarRight .NextStep{
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+    right: 30px;
+    top: 160px;
+    text-decoration: none;
+    padding: 12px 14px;
+    background-color: var(--borderBlue);
+    border-radius: 4px;
+    margin: 1rem 0;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    align-items: center;
+    box-shadow: var(--shadow-button);
+    cursor: pointer;
+    transition: var(--outline-transition);
+    font-family: 'Poppins', sans-serif;
+    }
+    
+    .ConfigurePage .NavBarContent .NavBarRight .NextStep .NextIcon{
+        font-size: 14px;
+        margin-left: 8px;
+    }
+    
+    .ConfigurePage .NavBarContent .NavBarRight .NextStep:focus{
+        outline: solid 4px var(--borderLight);
+    }
