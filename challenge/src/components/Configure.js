@@ -1,7 +1,8 @@
 import React, { useState }  from 'react'
 import styles from '../styles/configure.module.css'
 import {RightOutlined, InfoCircleFilled } from '@ant-design/icons'
-import { Switch } from 'antd';
+import {Switch} from 'antd'
+
 
 
 export default function Configure(){
@@ -26,12 +27,56 @@ export default function Configure(){
                         <p>2 of 3</p>
                     </div>
             <div className={styles.OptionsDashboard}>
+                <div className={styles.OptionLeft}>
+                    <div className={styles.OptionName}>
+                        <span>Brand Colors</span>
+                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
+                    </div>
+                    <div className={styles.ColorOptions}>
+                        <button className={styles.White}/>
+                        <button  className={styles.Blue}/>
+                    </div>
+                
+                </div>
                 <div className={styles.Option}>
                     <div className={styles.OptionName}>
-                        <span></span>
-                        <InfoCircleFilled />
+                        <span>Coupons</span>
+                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
                     </div>
-                    <Switch defaultChecked />
+                    <Switch className={styles.SwitchInput} />
+                
+                </div>
+                <div className={styles.Option}>
+                    <div className={styles.OptionName}>
+                        <span>Shipping</span>
+                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
+                    </div>
+                    <Switch className={styles.SwitchInput} />
+                
+                </div>
+                <div className={styles.OptionLeft}>
+                    <div className={styles.OptionName}>
+                        <span>Store policies</span>
+                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
+                    </div>
+                    <Switch className={styles.SwitchInput} />
+                
+                </div>
+                <div className={styles.Option}>
+                    <div className={styles.OptionName}>
+                        <span>Tax support</span>
+                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
+                    </div>
+                    <Switch className={styles.SwitchInput} />
+                
+                </div>
+                <div className={styles.Option}>
+                    <div className={styles.OptionName}>
+                        <span>Phone number</span>
+                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
+                    </div>
+                    <Switch className={styles.SwitchInput} />
+                
                 </div>
             </div>
             <a href="/preview" className={styles.NextStep}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
