@@ -1,6 +1,6 @@
 import React, { useState }  from 'react'
 import styles from '../styles/configure.module.css'
-import {RightOutlined, InfoCircleFilled } from '@ant-design/icons'
+import {RightOutlined, InfoCircleFilled, ArrowLeftOutlined } from '@ant-design/icons'
 import {Switch} from 'antd'
 
 
@@ -10,21 +10,39 @@ export default function Configure(){
         
     })
 
+    const[back, setBack] = useState(false)
 
+    function mouseOver(){
+        setBack(true);
+    }
+
+    function mouseOut(){
+        setBack(false);
+    }
 
     return(
         <div className={styles.ConfigurePage}>
         <div className={styles.NavBarContent}>
+      
             <div className={styles.NavBarLeft}>
+             
                 <div className={styles.NavBarTitle}>
                     <h1>Checkout</h1>
                 </div>
                 
             </div>
             <div className={styles.NavBarRight}>
+            <ArrowLeftOutlined className={styles.LeftArrow}/>
             <div className={styles.NavBarSubheading}>
-                        <span>Customize</span>
+            
+                        <span className={styles.CurrentText}>Customize</span>
                         <p>2 of 3</p>
+                        
+                        <a href="/" className={styles.BackLink}>
+                        
+                        <span className={back === true? styles.BackText : styles.BackNone}
+                         onMouseEnter={mouseOver} onMouseLeave={mouseOut}> Back</span>
+                         </a>
                     </div>
             <div className={styles.OptionsDashboard}>
                 <div className={styles.OptionLeft}>

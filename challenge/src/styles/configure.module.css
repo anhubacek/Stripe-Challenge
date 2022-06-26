@@ -29,15 +29,21 @@
     align-items: center;
     margin-top: 0px; 
 }
-
+.ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading span{
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: bold;
+    color:black;
 }
 
-.ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading p{
+.ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading  p{
     margin: 0px 8px;
     font-size: 15px;
     color: var(--text-gray);
@@ -190,4 +196,39 @@
         align-items: center;
        
         
+    }
+    .ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading .BackLink {
+        display: flex;
+        flex-direction: row;
+    }
+    .ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading .BackLink .BackNone{
+        position:absolute;
+        left: 0px;
+        top: 0px;
+        cursor: pointer;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        width: 250px;
+    }
+
+    .ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading .BackLink .BackText{
+        background-color: white;
+        position:absolute;
+        left: 0px;
+        top: 0px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color:black;
+        width: 250px;
+        transition: 0.2s;
+        opacity: 100%;
+        cursor: pointer;
+    }
+    .LeftArrow{
+        position: absolute;
+        left: 10px;
+        top: 140px;
     }
