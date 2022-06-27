@@ -102,7 +102,7 @@ export default function Configure(){
            
         </div>
     <div className={styles.App}>
-            {/* <iframe src={option.oneTimePayments === true? "http://localhost:3001/onetimepayments": "http://localhost:3001/recurringpayments"} title="Recurring-Payments" width="100%" height="100%" scrolling='no'/> */}
+             <iframe src= "http://localhost:3001/configurecheckout" title="Configure-Checkout" width="100%" height="100%" scrolling='no'/> 
         </div>
     </div>
     )
