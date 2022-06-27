@@ -1,14 +1,14 @@
 import React, { useState }  from 'react'
 import styles from '../styles/configure.module.css'
 import {RightOutlined, InfoCircleFilled, ArrowLeftOutlined } from '@ant-design/icons'
-import {Switch} from 'antd'
+import {Switch, Popover} from 'antd'
 
 
 
 export default function Configure(){
-    const [option, setOption] = useState({
+    // const [option, setOption] = useState({
         
-    })
+    // })
 
     const[back, setBack] = useState(false)
 
@@ -48,7 +48,7 @@ export default function Configure(){
                 <div className={styles.OptionLeft}>
                     <div className={styles.OptionName}>
                         <span>Brand Colors</span>
-                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
+                        <div className={styles.InfoIcon}><Popover placement="top"  content="Customize Checkout's colors to match your brand." > <InfoCircleFilled /></Popover></div>
                     </div>
                     <div className={styles.ColorOptions}>
                         <button className={styles.White}/>
@@ -59,7 +59,7 @@ export default function Configure(){
                 <div className={styles.Option}>
                     <div className={styles.OptionName}>
                         <span>Coupons</span>
-                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
+                        <div className={styles.InfoIcon}><Popover placement="top"  content="Create discount and promo codes to reward your most loyal customers." > <InfoCircleFilled /></Popover></div>
                     </div>
                     <Switch className={styles.SwitchInput} />
                 
@@ -67,7 +67,7 @@ export default function Configure(){
                 <div className={styles.Option}>
                     <div className={styles.OptionName}>
                         <span>Shipping</span>
-                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
+                        <div className={styles.InfoIcon}><Popover placement="top"  content="Collect your customer's shipping information and shipping method preference during checkout." > <InfoCircleFilled /></Popover></div>
                     </div>
                     <Switch className={styles.SwitchInput} />
                 
@@ -75,7 +75,7 @@ export default function Configure(){
                 <div className={styles.OptionLeft}>
                     <div className={styles.OptionName}>
                         <span>Store policies</span>
-                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
+                        <div className={styles.InfoIcon}><Popover placement="top"  content="Highlight your return policies, support information, or terms of service." > <InfoCircleFilled /></Popover></div>
                     </div>
                     <Switch className={styles.SwitchInput} />
                 
@@ -83,7 +83,7 @@ export default function Configure(){
                 <div className={styles.Option}>
                     <div className={styles.OptionName}>
                         <span>Tax support</span>
-                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
+                        <div className={styles.InfoIcon}><Popover placement="top"  content={"Set tax rates by region to collect the right amount based on your customer's location."} > <InfoCircleFilled /></Popover></div>
                     </div>
                     <Switch className={styles.SwitchInput} />
                 
@@ -91,7 +91,7 @@ export default function Configure(){
                 <div className={styles.Option}>
                     <div className={styles.OptionName}>
                         <span>Phone number</span>
-                        <div className={styles.InfoIcon}><InfoCircleFilled /></div>
+                        <div className={styles.InfoIcon}><Popover placement="top"  content="Collect your customer's phone number if you need to contact them regarding the transaction." > <InfoCircleFilled /></Popover></div>
                     </div>
                     <Switch className={styles.SwitchInput} />
                 
@@ -101,9 +101,6 @@ export default function Configure(){
             </div>
            
         </div>
-    <div className={styles.App}>
-        {/* <iframe src="#" width="100%" height="100%" scrolling='no'/> */}
-    </div>
     <div className={styles.App}>
             {/* <iframe src={option.oneTimePayments === true? "http://localhost:3001/onetimepayments": "http://localhost:3001/recurringpayments"} title="Recurring-Payments" width="100%" height="100%" scrolling='no'/> */}
         </div>

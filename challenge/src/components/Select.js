@@ -50,7 +50,7 @@ export default function Select(){
                         <p>Subscription or SaaS business</p>
                     </div>
                 </button>
-                <a href={option.oneTimePayments === true? "/configure": "/"} className={option.recurringPayments === true? styles.disabled: styles.NextStep}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
+                <a href={option.oneTimePayments === true? "/configure": "/"} className={option.oneTimePayments === true ? styles.NextStep : styles.disabled}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
                 </div>
                
             </div>
