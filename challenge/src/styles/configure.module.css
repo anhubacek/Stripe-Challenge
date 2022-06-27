@@ -106,7 +106,7 @@
         flex-direction: row;
         width: 320px;
         justify-content: space-between;
-        margin:10px 50px;
+        margin:10px 40px;
     }
     .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .OptionLeft .OptionName{
         display: flex;
@@ -174,7 +174,7 @@
         flex-direction: row;
         width: 230px;
         justify-content: space-between;
-        margin:10px 50px;
+        margin:10px 40px;
     }
 
     .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard  .Option .OptionName{
