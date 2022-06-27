@@ -2,6 +2,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import RecurringPayments from './components/RecurringPayments';
 import OneTimePayments from './components/OneTimePayments';
+import ConfigureCheckout from './components/ConfigureCheckout';
 
 function App() {
   return (
@@ -14,6 +15,10 @@ function App() {
     <Route 
             exact path='/onetimepayments'
             element= {<OneTimePayments/>}
+            />
+    <Route 
+            exact path='/configurecheckout'
+            element= {<ConfigureCheckout/>}
             />
     </Routes>
 
