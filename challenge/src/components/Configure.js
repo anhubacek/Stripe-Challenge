@@ -6,9 +6,9 @@ import {Switch, Popover} from 'antd'
 
 
 export default function Configure(){
-    const [option, setOption] = useState({
+    // const [option, setOption] = useState({
         
-    })
+    // })
 
     const[back, setBack] = useState(false)
 
@@ -101,9 +101,6 @@ export default function Configure(){
             </div>
            
         </div>
-    <div className={styles.App}>
-        {/* <iframe src="#" width="100%" height="100%" scrolling='no'/> */}
-    </div>
     <div className={styles.App}>
             {/* <iframe src={option.oneTimePayments === true? "http://localhost:3001/onetimepayments": "http://localhost:3001/recurringpayments"} title="Recurring-Payments" width="100%" height="100%" scrolling='no'/> */}
         </div>

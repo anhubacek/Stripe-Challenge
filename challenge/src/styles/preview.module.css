@@ -1,0 +1,226 @@
+.PreviewPage {
+    height: 1000px;
+   
+}
+.PreviewPage .NavBarContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 250px;
+    margin-left: 30px;
+    padding-top: 45px;
+}
+.PreviewPage .App{
+    height: 800px;
+    background-color: var(--greyBackground);
+}
+.PreviewPage .App iframe{
+    border: none;
+}
+.PreviewPage .NavBarContent .NavBarLeft{
+    margin-top: 30px;
+}
+
+.PreviewPage .NavBarContent .NavBarRight .NavBarSubheading{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 30px;
+    align-items: center;
+    margin-top: 0px; 
+}
+.PreviewPage .NavBarContent .NavBarRight .NavBarSubheading {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.PreviewPage .NavBarContent .NavBarRight .NavBarSubheading span{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color:black;
+}
+
+.PreviewPage .NavBarContent .NavBarRight .NavBarSubheading  p{
+    margin: 0px 8px;
+    font-size: 15px;
+    color: var(--text-gray);
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.PreviewPage .NavBarContent .NavBarRight{
+    display: flex;
+    margin-top:0px;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.PreviewPage .NavBarContent .NavBarRight .NextStep{
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+    right: 30px;
+    top: 160px;
+    text-decoration: none;
+    padding: 12px 14px;
+    background-color: var(--borderBlue);
+    border-radius: 4px;
+    margin: 1rem 0;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    align-items: center;
+    box-shadow: var(--shadow-button);
+    cursor: pointer;
+    transition: var(--outline-transition);
+    font-family: 'Poppins', sans-serif;
+    }
+    
+    .PreviewPage .NavBarContent .NavBarRight .NextStep .NextIcon{
+        font-size: 14px;
+        margin-left: 8px;
+    }
+    
+    .PreviewPage .NavBarContent .NavBarRight .NextStep:focus{
+        outline: solid 4px var(--borderLight);
+    }
+
+    .PreviewPage .NavBarContent .NavBarRight .NavBarSubheading .BackLink {
+        display: flex;
+        flex-direction: row;
+    }
+    .PreviewPage .NavBarContent .NavBarRight .NavBarSubheading .BackLink .BackNone{
+        position:absolute;
+        left: 0px;
+        top: 0px;
+        cursor: pointer;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        width: 250px;
+    }
+
+    .PreviewPage .NavBarContent .NavBarRight .NavBarSubheading .BackLink .BackText{
+        background-color: white;
+        position:absolute;
+        left: 0px;
+        top: 0px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color:black;
+        width: 250px;
+        transition: 0.2s;
+        opacity: 100%;
+        cursor: pointer;
+    }
+    .LeftArrow{
+        position: absolute;
+        left: 10px;
+        top: 140px;
+    }
+
+    .PreviewPage .NavBarContent .NavBarRight .OptionsDashboard{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 500px;
+        padding-top: 45px;
+    }
+
+    
+    .PreviewPage .NavBarContent .NavBarRight .OptionsDashboard .Device .Left{
+        color: var(--icon-gray);
+        background: none;
+        border: solid 1px var(--icon-gray);
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        border-left: solid 0.1px rgb(218, 216, 216);
+        border-right: none;
+        border-top: solid 0.1px rgb(218, 216, 216);
+        border-bottom: solid 0.1px rgb(218, 216, 216);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .PreviewPage .NavBarContent .NavBarRight .OptionsDashboard .Device .Left:focus{
+        color: var(--blue);
+        outline: solid 4px var(--borderLight);
+    }
+
+    .PreviewPage .NavBarContent .NavBarRight .OptionsDashboard .Device .Right{
+        color: var(--icon-gray);
+        background:none;
+        border: solid 1px var(--icon-gray);
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        border-right: solid 0.1px rgb(218, 216, 216);
+        border-left: none;
+        border-top: solid 0.1px rgb(218, 216, 216);
+        border-bottom: solid 0.1px rgb(218, 216, 216);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .PreviewPage .NavBarContent .NavBarRight .OptionsDashboard .Device .Right:focus{
+        color: var(--blue);
+        outline: solid 4px var(--borderLight);
+    }
+
+    .PreviewPage .NavBarContent .NavBarRight .OptionsDashboard .Language {
+        height: 45px;
+        width: 370px;
+        border: solid 0.1px rgb(218, 216, 216);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        background-color: white;
+      
+    }
+    .PreviewPage .NavBarContent .NavBarRight .OptionsDashboard .Language:focus{
+        outline: solid 4px var(--borderLight);
+    }
+
+    .PreviewPage .NavBarContent .NavBarRight .OptionsDashboard .Language select{
+        border:none;
+        font-size: 18px;
+        margin-left: 5px;
+        font-weight: bold;
+        width: 150px;
+        cursor: pointer;
+    }
+
+    .PreviewPage .NavBarContent .NavBarRight .OptionsDashboard .Language select:focus{
+        border:none;
+        outline:none;
+    }
+
+    .PreviewPage .NavBarContent .NavBarRight .OptionsDashboard .Language select option{
+        cursor: pointer;
+        color: var(--text-gray);
+        border:none;
+     
+    }
+
+    .PreviewPage .NavBarContent .NavBarRight .OptionsDashboard .Language label{
+        color: var(--text-gray);
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 5px;
+    }
