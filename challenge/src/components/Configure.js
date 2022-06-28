@@ -6,9 +6,10 @@ import {Switch, Popover} from 'antd'
 
 
 export default function Configure(){
-    // const [option, setOption] = useState({
-        
-    // })
+    const [options, setOptions] = useState({
+        color: "light",
+
+    })
 
     const[back, setBack] = useState(false)
 
@@ -19,6 +20,16 @@ export default function Configure(){
     function mouseOut(){
         setBack(false);
     }
+
+    function handleChange(e){
+        e.preventDefault(e);
+        setOptions({
+            ...options,
+            [e.target.name] : e.target.value
+        })
+
+    }
+
 
     return(
         <div className={styles.ConfigurePage}>
@@ -51,8 +62,8 @@ export default function Configure(){
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Customize Checkout's colors to match your brand." > <InfoCircleFilled /></Popover></div>
                     </div>
                     <div className={styles.ColorOptions}>
-                        <button className={styles.White}/>
-                        <button  className={styles.Blue}/>
+                        <button className={styles.White} onFocus={handleChange} name="color" value="Light"/>
+                        <button  className={styles.Blue} onFocus={handleChange} name="color" value="Dark"/>
                     </div>
                 
                 </div>
@@ -102,7 +113,8 @@ export default function Configure(){
            
         </div>
     <div className={styles.App}>
-             <iframe src= "http://localhost:3001/configurecheckout" title="Configure-Checkout" width="100%" height="100%" scrolling='no'/> 
+             <iframe src={ options.color === "Light" ? "http://localhost:3001/configurecheckout": "http://localhost:3001/configurecheckout/?color=dark"} 
+             title="Configure-Checkout" width="100%" height="100%" scrolling='no'/> 
         </div>
     </div>
     )
