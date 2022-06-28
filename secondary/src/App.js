@@ -8,18 +8,19 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-    <Route 
-            exact path='/recurringpayments'
-            element= {<RecurringPayments/>}
-            />
-    <Route 
-            exact path='/onetimepayments'
-            element= {<OneTimePayments/>}
-            />
-    <Route 
-            exact path='/configurecheckout'
-            element= {<ConfigureCheckout/>}
-            />
+        <Route 
+                exact path='/recurringpayments'
+                element= {<RecurringPayments/>}
+                />
+        <Route 
+                exact path='/onetimepayments'
+                element= {<OneTimePayments/>}
+                />
+        <Route 
+                path='/configurecheckout'
+                element= {<ConfigureCheckout/>}
+                />
+             
     </Routes>
 
     </BrowserRouter>

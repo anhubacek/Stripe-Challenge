@@ -1,5 +1,5 @@
 .ConfigureCheckout{
-    /* background-color: white; */
+
     width: 100%;
     height: 1000px;
     display: flex;
@@ -10,12 +10,13 @@
 
 .ConfigureCheckout .Content{
     display: flex;
+    flex-direction: column;
     margin-top: 70px;
-    justify-content: center;
-    width: 1000px;
+    width: 960px;
     height: 700px;
     border-radius: 10px;
     box-shadow: 0px 10px 30px rgba(153, 153, 153, 0.856);
+    background-color: white;
 }
 
 .ConfigureCheckout .Content .Bar{
@@ -23,11 +24,12 @@
     height: 45px;
     box-shadow: 0 0.5px 0 #e6e9ec;
     border-top-right-radius: 10px;
-    background-color: #fcfeff;
+    background: #fcfeff;
     border-top-left-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 }
 .ConfigureCheckout .Content .Bar .ChromeBar{
     display: flex;
@@ -46,8 +48,52 @@
 }
 
 .ConfigureCheckout .Content .Bar .ChromeButtons{
-    width: 100px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
 }
 .ConfigureCheckout .Content .Bar .ChromeButtons .FakeChromeButton{
-    background-color: var();
+    display:flex;
+    background-color:rgba(227, 232, 236, 0.534);
+    width: 10px;
+    height: 10px;
+    align-self: center;
+    margin: 0px 4px;
+    border-radius: 10px;
+
+}
+.ConfigureCheckout .Content .Checkout{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.ConfigureCheckout .Content .Checkout .LightLeft{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    color: black
+}
+
+.ConfigureCheckout .Content .Checkout .DarkLeft{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: var(--blue-mode);
+    color: var(--white-blue-mode)
+}
+
+
+.ConfigureCheckout .Content .Checkout .Right{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    box-shadow: -5px 0px  15px  rgba(145, 144, 144, 0.18);
+    padding-bottom: 40px;
 }
