@@ -58,7 +58,7 @@ export default function ConfigureCheckout (){
                                 <div className={styles.Image}></div>
                                 <div className={styles.Middle}>
                                     <div className={styles.GrayTemplateTop}></div>
-                                    <div className={styles.GrayTemplate}></div>
+                                    <div className={styles.GrayTemplateBottom}></div>
                                 </div>
                                 <div className={styles.RightTemplate}></div>
                             </div>

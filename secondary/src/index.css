@@ -37,6 +37,7 @@ code {
   --blue-mode: rgb(25, 37, 82);
   --white-blue-mode: rgb(255, 255, 255);
   --placeholder: rgba(26,26,26,.1);
+  --dark-placeholder: rgba(255, 255, 255, 0.199);
 
 }
   
