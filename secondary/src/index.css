@@ -35,8 +35,14 @@ code {
   --shadow-small: 0px 2px 5px rgba(60,66,87,0.12),0px 1px 1px rgba(0,0,0,0.08);
   --shadow-button: 0px 2px 5px rgba(60,66,87,0.12),0px 1px 1px rgba(0,0,0,0.08),inset 0px -1px 1px rgba(0,0,0,0.12);
   --blue-mode: rgb(25, 37, 82);
+  --white-blue-mode: rgb(255, 255, 255);
+
 }
   
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 @import '~antd/dist/antd.css';
+
+*{
+  transition: outline .2s ease;
+}
