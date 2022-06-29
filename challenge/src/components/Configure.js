@@ -7,9 +7,12 @@ import {Switch, Popover} from 'antd'
 
 export default function Configure(){
     const [options, setOptions] = useState({
-        color: "light",
+        color: "Light",
+        coupons: false,
+        shipping: false,
 
     })
+    console.log("Options:", options)
 
     const[back, setBack] = useState(false)
 
@@ -21,16 +24,30 @@ export default function Configure(){
         setBack(false);
     }
 
-    function handleChange(e){
-        e.preventDefault(e);
+    function handleChangeColor(e){
         setOptions({
             ...options,
             [e.target.name] : e.target.value
+          
         })
-
     }
 
+    
+    const onChangeCoupons = (checked) => {
+        setOptions({
+            ...options,
+            coupons : checked
+        });
+      };
 
+      const onChangeShipping = (checked) => {
+        setOptions({
+            ...options,
+            shipping : checked
+        });
+      };
+
+      
     return(
         <div className={styles.ConfigurePage}>
         <div className={styles.NavBarContent}>
@@ -38,7 +55,7 @@ export default function Configure(){
             <div className={styles.NavBarLeft}>
              
                 <div className={styles.NavBarTitle}>
-                    <h1>Checkout</h1>
+                    <h1>Explore Checkout</h1>
                 </div>
                 
             </div>
@@ -62,8 +79,8 @@ export default function Configure(){
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Customize Checkout's colors to match your brand." > <InfoCircleFilled /></Popover></div>
                     </div>
                     <div className={styles.ColorOptions}>
-                        <button className={styles.White} onFocus={handleChange} name="color" value="Light"/>
-                        <button  className={styles.Blue} onFocus={handleChange} name="color" value="Dark"/>
+                        <button className={styles.White} onFocus={handleChangeColor} name="color" value="Light"/>
+                        <button  className={styles.Blue} onFocus={handleChangeColor} name="color" value="Dark"/>
                     </div>
                 
                 </div>
@@ -72,7 +89,7 @@ export default function Configure(){
                         <span>Coupons</span>
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Create discount and promo codes to reward your most loyal customers." > <InfoCircleFilled /></Popover></div>
                     </div>
-                    <Switch className={styles.SwitchInput} />
+                    <Switch size="small" className={styles.SwitchInput} name="coupons" onChange={onChangeCoupons} />
                 
                 </div>
                 <div className={styles.Option}>
@@ -80,7 +97,7 @@ export default function Configure(){
                         <span>Shipping</span>
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Collect your customer's shipping information and shipping method preference during checkout." > <InfoCircleFilled /></Popover></div>
                     </div>
-                    <Switch className={styles.SwitchInput} />
+                    <Switch size="small" className={styles.SwitchInput} name="shipping" onChange={onChangeShipping} />
                 
                 </div>
                 <div className={styles.OptionLeft}>
@@ -88,7 +105,7 @@ export default function Configure(){
                         <span>Store policies</span>
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Highlight your return policies, support information, or terms of service." > <InfoCircleFilled /></Popover></div>
                     </div>
-                    <Switch className={styles.SwitchInput} />
+                    <Switch size="small" className={styles.SwitchInput} />
                 
                 </div>
                 <div className={styles.Option}>
@@ -96,7 +113,7 @@ export default function Configure(){
                         <span>Tax support</span>
                         <div className={styles.InfoIcon}><Popover placement="top"  content={"Set tax rates by region to collect the right amount based on your customer's location."} > <InfoCircleFilled /></Popover></div>
                     </div>
-                    <Switch className={styles.SwitchInput} />
+                    <Switch size="small" className={styles.SwitchInput} />
                 
                 </div>
                 <div className={styles.Option}>
@@ -104,7 +121,7 @@ export default function Configure(){
                         <span>Phone number</span>
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Collect your customer's phone number if you need to contact them regarding the transaction." > <InfoCircleFilled /></Popover></div>
                     </div>
-                    <Switch className={styles.SwitchInput} />
+                    <Switch size="small" className={styles.SwitchInput} />
                 
                 </div>
             </div>
@@ -113,7 +130,7 @@ export default function Configure(){
            
         </div>
     <div className={styles.App}>
-             <iframe src={ options.color === "Light" ? "http://localhost:3001/configurecheckout": "http://localhost:3001/configurecheckout/?color=dark"} 
+             <iframe src={`http://localhost:3001/configurecheckout${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`}
              title="Configure-Checkout" width="100%" height="100%" scrolling='no'/> 
         </div>
     </div>

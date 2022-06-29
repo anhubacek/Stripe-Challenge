@@ -23,7 +23,7 @@ export default function Select(){
             <div className={styles.NavBarContent}>
                 <div className={styles.NavBarLeft}>
                     <div className={styles.NavBarTitle}>
-                        <h1>Checkout</h1>
+                        <h1>Explore Checkout</h1>
                     </div>
                     
                 </div>
