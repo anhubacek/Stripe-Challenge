@@ -108,7 +108,11 @@
     font-size: 18px;
 }
 
-
+.ConfigureCheckout .Content .Checkout .LightLeft .Logo .LeftArrow{
+    font-size: 8px;
+    color: grey;
+    width: 8px;
+}
 .ConfigureCheckout .Content .Checkout .LightLeft .Logo span{
     margin-right: 5px;
     color: black;
@@ -189,6 +193,13 @@
     margin-top: 20px;
     align-items: center;
 }
+
+.ConfigureCheckout .Content .Checkout .LightLeft .CouponsTopHidden{
+    display:none;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .CouponsTopHidden{
+    display:none;
+}
 .ConfigureCheckout .Content .Checkout .LightLeft .CouponsTop .GrayTemplate{
     display:flex;
     height: 8px;
@@ -207,6 +218,13 @@
     margin-top: 10px;
     align-items: center;
 }
+
+.ConfigureCheckout .Content .Checkout .LightLeft .CouponsBottomHidden{
+    display:none;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .CouponsBottomHidden{
+    display:none;
+}
 .ConfigureCheckout .Content .Checkout .LightLeft .CouponsBottom .GrayTemplate{
     display:flex;
     height: 8px;
@@ -224,6 +242,13 @@
     border-radius: 4px;
   
 }
+
+.ConfigureCheckout .Content .Checkout .LightLeft  .CouponsButtonHidden{
+    display:none;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft  .CouponsButtonHidden{
+    display:none;
+}
 .ConfigureCheckout .Content .Checkout .LightLeft .Shipping{
     display: flex;
     flex-direction: row;
@@ -235,6 +260,12 @@
     margin-top: 12px;
     margin-bottom: 0px;
     
+}
+.ConfigureCheckout .Content .Checkout .LightLeft .ShippingHidden{
+    display:none;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .ShippingHidden{
+    display:none;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Shipping .ShippingDetails{
     display: flex;
@@ -254,7 +285,10 @@
     color: var(--placeholder);
     font-size: 14px;
     margin-top: 50px;
-    align-items: center
+    align-items: center;
+    position: absolute;
+    top: 460px;
+    left: 250px;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Footer .GrayTemplate{
     display:flex;
@@ -270,7 +304,11 @@
 .ConfigureCheckout .Content .Checkout .DarkLeft .Logo {
     font-size: 18px;
 }
+.ConfigureCheckout .Content .Checkout .DarkLeft .Logo .LeftArrow{
+    font-size: 8px;
+    color: var(--white-blue-mode);
 
+}
 
 .ConfigureCheckout .Content .Checkout .DarkLeft .Logo span{
     margin-right: 5px;
@@ -417,7 +455,10 @@
     color: var(--dark-placeholder);
     font-size: 14px;
     margin-top: 50px;
-    align-items: center
+    align-items: center;
+    position: absolute;
+    top: 460px;
+    left: 250px;
 }
 .ConfigureCheckout .Content .Checkout .DarkLeft .Footer .GrayTemplate{
     display:flex;
@@ -429,3 +470,4 @@
     
 
 }
+
