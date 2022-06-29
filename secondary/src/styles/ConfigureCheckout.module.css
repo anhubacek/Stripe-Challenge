@@ -11,9 +11,9 @@
 .ConfigureCheckout .Content{
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
-    width: 960px;
-    height: 700px;
+    margin-top: 60px;
+    width: 730px;
+    height: 550px;
     border-radius: 10px;
     box-shadow: 0px 10px 30px rgba(153, 153, 153, 0.856);
     background-color: white;
@@ -21,7 +21,7 @@
 
 .ConfigureCheckout .Content .Bar{
     width: 100%;
-    height: 45px;
+    height: 35px;
     box-shadow: 0 0.5px 0 #e6e9ec;
     border-top-right-radius: 10px;
     background: #fcfeff;
@@ -33,8 +33,8 @@
 }
 .ConfigureCheckout .Content .Bar .ChromeBar{
     display: flex;
-    width: 830px;
-    height: 25px;
+    width: 650px;
+    height: 18px;
     background: rgba(236,242,247,.4);
     box-shadow: 0 0.5px 0 #ecf2f7;
     border-radius: 8px;
@@ -48,18 +48,18 @@
 }
 
 .ConfigureCheckout .Content .Bar .ChromeButtons{
-    height: 45px;
+    height: 35px;
     display: flex;
     flex-direction: row;
-    margin-left: 15px;
+    margin-left: 7px;
 }
 .ConfigureCheckout .Content .Bar .ChromeButtons .FakeChromeButton{
     display:flex;
-    background-color:rgba(227, 232, 236, 0.534);
-    width: 10px;
-    height: 10px;
+    background-color:rgba(227, 232, 236, 0.582);
+    width: 8px;
+    height: 8px;
     align-self: center;
-    margin: 0px 4px;
+    margin: 0px 3px;
     border-radius: 10px;
 
 }
@@ -77,7 +77,7 @@
     width: 50%;
     height: 100%;
     box-shadow: -5px 0px  15px  rgba(145, 144, 144, 0.18);
-    padding-bottom: 40px;
+    
 }
 .ConfigureCheckout .Content .Checkout .LightLeft{
     display: flex;
@@ -86,9 +86,9 @@
     height: 100%;
     background-color: white;
     color: black;
-    padding-left: 90px;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-left: 60px;
+    padding-top: 50px;
+    padding-bottom: 60px;
 
 }
 
@@ -99,35 +99,36 @@
     height: 100%;
     background-color: var(--blue-mode);
     color: var(--white-blue-mode);
-    padding-left: 90px;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-left: 60px;
+    padding-top: 50px;
+    padding-bottom: 60px;
 }
 
 .ConfigureCheckout .Content .Checkout .LightLeft .Logo {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 
 .ConfigureCheckout .Content .Checkout .LightLeft .Logo span{
     margin-right: 5px;
     color: black;
-    font-size: 14px;
+    font-size: 12px;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Price{
     display: flex;
     flex-direction: column;
 }  
 .ConfigureCheckout .Content .Checkout .LightLeft .Price .GrayTemplate{
-    margin-top: 25px;
-    height: 12px;
-    width: 45px;
+    margin-top: 15px;
+    height: 8px;
+    width: 35px;
     background-color: var(--placeholder);
     border-radius: 3px;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Price span{
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 25px;
+    font-weight: 500;
 }
 
 .ConfigureCheckout .Content .Checkout .LightLeft .Detail{
@@ -139,98 +140,101 @@
 .ConfigureCheckout .Content .Checkout .LightLeft .Detail .DetailTemplate{
     display: flex;
     flex-direction: row;
-    height: 28px;
+    height: 22px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Detail .DetailTemplate .Image{
     background-color: rgb(182, 216, 216);
     height: 100%;
-    width: 30px;
+    width: 20px;
     border-radius: 5px;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Detail .DetailTemplate .Middle{
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 10px;
+    margin-left: 8px;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Detail .DetailTemplate .Middle .GrayTemplateTop{
-    height: 11px;
-    width: 70px;
+    height: 8px;
+    width: 60px;
     background-color: var(--placeholder);
     border-radius: 3px;
     
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Detail .DetailTemplate .Middle .GrayTemplateBottom{
-    height: 11px;
-    width: 20px;
+    height: 8px;
+    width: 15px;
     background-color: var(--placeholder);
     border-radius: 3px;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Detail .DetailTemplate .RightTemplate{
     display:flex;
-    height: 12px;
-    width: 40px;
+    height: 8px;
+    width: 30px;
     background-color: var(--placeholder);
     border-radius: 3px;
-    margin-left: 180px;
+    margin-left: 140px;
     
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .CouponsTop{
     border-bottom: solid 1px var(--placeholder);
-    width: 290px;
+    width: 230px;
     height: 28px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-top: 20px;
     align-items: center;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .CouponsTop .GrayTemplate{
     display:flex;
-    height: 10px;
-    width: 40px;
+    height: 8px;
+    width: 30px;
     background-color: var(--placeholder);
     border-radius: 3px;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .CouponsBottom{
     border-top: solid 1px var(--placeholder);
-    width: 290px;
+    width: 230px;
     height: 28px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 40px;
-    margin-top: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
     align-items: center;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .CouponsBottom .GrayTemplate{
     display:flex;
-    height: 10px;
-    width: 60px;
+    height: 8px;
+    width: 40px;
     background-color: var(--placeholder);
     border-radius: 3px;
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .CouponsButton{
     background-color: var(--placeholder);
     width: fit-content;
-    padding: 4px 10px;
-    font-size: 12px;
-    margin-left: 40px;
+    padding: 4px 6px;
+    font-size: 8px;
+    margin-left: 30px;
     margin-top: 10px;
     border-radius: 4px;
+  
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Shipping{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 290px;
+    width: 230px;
     font-size: 12px;
-    margin-left: 40px;
+    margin-left: 30px;
     color: rgb(121, 120, 120);
     margin-top: 12px;
+    margin-bottom: 0px;
+    
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Shipping .ShippingDetails{
     display: flex;
@@ -239,6 +243,7 @@
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Shipping .ShippingDetails span{
     margin: 0px;
+    font-size: 9px;
 }
 
 .ConfigureCheckout .Content .Checkout .LightLeft .Footer{
@@ -248,16 +253,179 @@
     height: 30px;
     color: var(--placeholder);
     font-size: 14px;
-    margin-top: 100px;
+    margin-top: 50px;
     align-items: center
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .Footer .GrayTemplate{
     display:flex;
-    height: 10px;
-    width: 75px;
+    height: 8px;
+    width: 55px;
     background-color: var(--placeholder);
     border-radius: 3px;
-    margin: 10px;
+    margin: 6px;
+    
+
+}
+
+.ConfigureCheckout .Content .Checkout .DarkLeft .Logo {
+    font-size: 18px;
+}
+
+
+.ConfigureCheckout .Content .Checkout .DarkLeft .Logo span{
+    margin-right: 5px;
+    color: var(--white-blue-mode);
+    font-size: 12px;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Price{
+    display: flex;
+    flex-direction: column;
+}  
+.ConfigureCheckout .Content .Checkout .DarkLeft .Price .GrayTemplate{
+    margin-top: 15px;
+    height: 8px;
+    width: 35px;
+    background-color: var(--dark-placeholder);
+    border-radius: 3px;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Price span{
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.ConfigureCheckout .Content .Checkout .DarkLeft .Detail{
+    width: 100%;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Detail .DetailTemplate{
+    display: flex;
+    flex-direction: row;
+    height: 22px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Detail .DetailTemplate .Image{
+    background-color: rgb(182, 216, 216);
+    height: 100%;
+    width: 20px;
+    border-radius: 5px;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Detail .DetailTemplate .Middle{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 8px;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Detail .DetailTemplate .Middle .GrayTemplateTop{
+    height: 8px;
+    width: 60px;
+    background-color: var(--dark-placeholder);
+    border-radius: 3px;
+    
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Detail .DetailTemplate .Middle .GrayTemplateBottom{
+    height: 8px;
+    width: 15px;
+    background-color: var(--dark-placeholder);
+    border-radius: 3px;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Detail .DetailTemplate .RightTemplate{
+    display:flex;
+    height: 8px;
+    width: 30px;
+    background-color: var(--dark-placeholder);
+    border-radius: 3px;
+    margin-left: 140px;
+    
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .CouponsTop{
+    border-bottom: solid 1px var(--dark-placeholder);
+    width: 230px;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 20px;
+    align-items: center;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .CouponsTop .GrayTemplate{
+    display:flex;
+    height: 8px;
+    width: 30px;
+    background-color: var(--dark-placeholder);
+    border-radius: 3px;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .CouponsBottom{
+    border-top: solid 1px var(--dark-placeholder);
+    width: 230px;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 10px;
+    align-items: center;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .CouponsBottom .GrayTemplate{
+    display:flex;
+    height: 8px;
+    width: 40px;
+    background-color: var(--dark-placeholder);
+    border-radius: 3px;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .CouponsButton{
+    background-color: var(--dark-placeholder);
+    width: fit-content;
+    padding: 4px 6px;
+    font-size: 8px;
+    margin-left: 30px;
+    margin-top: 10px;
+    border-radius: 4px;
+  
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Shipping{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 230px;
+    font-size: 12px;
+    margin-left: 30px;
+    color:var(--white-blue-mode);
+    margin-top: 12px;
+    margin-bottom: 0px;
+    
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Shipping .ShippingDetails{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Shipping .ShippingDetails span{
+    margin: 0px;
+    font-size: 9px;
+}
+
+.ConfigureCheckout .Content .Checkout .DarkLeft .Footer{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 30px;
+    color: var(--dark-placeholder);
+    font-size: 14px;
+    margin-top: 50px;
+    align-items: center
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .Footer .GrayTemplate{
+    display:flex;
+    height: 8px;
+    width: 55px;
+    background-color: var(--dark-placeholder);
+    border-radius: 3px;
+    margin: 6px;
     
 
 }
