@@ -8,14 +8,7 @@ import {useOptionsContext, useOptionsUpdateColorContext,
 
 
 export default function Configure(){
-    // const [options, setOptions] = useState({
-    //     color: "Light",
-    //     coupons: false,
-    //     shipping: false,
-
-    // })
-
-
+   
     const options = useOptionsContext()
     const updateColor = useOptionsUpdateColorContext()
     const updateCoupons = useOptionsUpdateCouponsContext()
@@ -31,29 +24,6 @@ export default function Configure(){
     function mouseOut(){
         setBack(false);
     }
-
-    // function handleChangeColor(e){
-    //     setOptions({
-    //         ...options,
-    //         [e.target.name] : e.target.value
-          
-    //     })
-    // }
-
-    
-    // const onChangeCoupons = (checked) => {
-    //     setOptions({
-    //         ...options,
-    //         coupons : checked
-    //     });
-    //   };
-
-    //   const onChangeShipping = (checked) => {
-    //     setOptions({
-    //         ...options,
-    //         shipping : checked
-    //     });
-    //   };
 
       
     return(
@@ -113,7 +83,7 @@ export default function Configure(){
                         <span>Store policies</span>
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Highlight your return policies, support information, or terms of service." > <InfoCircleFilled /></Popover></div>
                     </div>
-                    <Switch size="small" className={styles.SwitchInput} />
+                    <Switch size="small" className={styles.SwitchInput}  checked={false} />
                 
                 </div>
                 <div className={styles.Option}>
@@ -121,7 +91,7 @@ export default function Configure(){
                         <span>Tax support</span>
                         <div className={styles.InfoIcon}><Popover placement="top"  content={"Set tax rates by region to collect the right amount based on your customer's location."} > <InfoCircleFilled /></Popover></div>
                     </div>
-                    <Switch size="small" className={styles.SwitchInput} />
+                    <Switch size="small" className={styles.SwitchInput} checked={false} />
                 
                 </div>
                 <div className={styles.Option}>
@@ -129,11 +99,11 @@ export default function Configure(){
                         <span>Phone number</span>
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Collect your customer's phone number if you need to contact them regarding the transaction." > <InfoCircleFilled /></Popover></div>
                     </div>
-                    <Switch size="small" className={styles.SwitchInput} />
+                    <Switch size="small" className={styles.SwitchInput} checked={false} />
                 
                 </div>
             </div>
-            <a href="/preview" className={styles.NextStep}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
+            <a href={`/preview/${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`} className={styles.NextStep}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
             </div>
            
         </div>

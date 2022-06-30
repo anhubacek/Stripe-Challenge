@@ -1,7 +1,8 @@
 import {React, useEffect, useState}  from 'react'
 import { useParams, useSearchParams } from 'react-router-dom'
 import styles from '../styles/ConfigureCheckout.module.css'
-import {TrademarkCircleFilled, ArrowLeftOutlined} from '@ant-design/icons'
+import {TrademarkCircleFilled, ArrowLeftOutlined, DownOutlined,
+    CheckOutlined, LockFilled} from '@ant-design/icons'
 
 
 export default function ConfigureCheckout (){
@@ -35,7 +36,7 @@ export default function ConfigureCheckout (){
                         <div className={styles.FakeChromeButton}></div>
                     </div>
                     <div className={styles.ChromeBar}>
-                    <span>checkoutstripe.com</span>
+                    <span><LockFilled className={styles.LockedIcon}/> checkoutstripe.com</span>
                     </div>
                 </div>
                 <div className={styles.Checkout}>
@@ -102,18 +103,42 @@ export default function ConfigureCheckout (){
                                 <div className={styles.Middle}></div>
                                 <div className={styles.Line}></div>
                             </div>
-                            <div className={styles.TemplateMiddleShipping}>
-                                
+                            <div className={options.shipping === "true" ? styles.TemplateMiddle : styles.TemplateMiddleHidden}>
+            
                             </div>
                             <div className={styles.TemplateThree}>
                             <div className={styles.Top}></div>
                             <div className={styles.Bottom}></div>
                             </div>
-                            <div className={styles.TemplateFour}>
+                            <div className={options.shipping === "true" ? styles.Shipping : styles.ShippingHidden}>
+                            <label className={styles.AddressLabel}>Shipping Adress</label>
+                                <div className={styles.Name}>Name</div>
+                                <div className={styles.Country}><span>United States</span> <DownOutlined /></div>
+                                <div className={styles.AddressInput}>Address</div>
+                                <label className={styles.EnterAddressLabel}>Enteradress manually</label>
+                                <label className={styles.MethodLabel}>Shipping Method</label>
+                                <div className={styles.Free}>
+                                    <div className={styles.Left}> </div>
+                                    <div className={styles.Middle}>
+                                        <span>Free Shipping</span>
+                                        <p>5-7 business days</p>
+                                    </div>
+                                    <div className={styles.Right}>Free</div>
+                                </div>
+                                <div className={styles.Next}>
+                                    <div className={styles.Left}></div>
+                                    <div className={styles.Middle}>
+                                    <span>Next day air</span>
+                                        <p>1 business days</p>
+                                    </div>
+                                    <div className={styles.Right}>$15,00</div>
+                                </div>
+                            </div>
+                            <div className={options.shipping === "true" ? styles.TemplateFourHidden : styles.TemplateFour}>
                             <div className={styles.Top}></div>
                             <div className={styles.Bottom}></div>
                             </div>
-                            <div className={styles.TemplateFive}>
+                            <div className={options.shipping === "true" ? styles.TemplateFiveHidden : styles.TemplateFive}>
                             <div className={styles.Top}></div>
                             <div className={styles.Bottom}></div>
                             </div>
@@ -121,8 +146,11 @@ export default function ConfigureCheckout (){
                             <div className={styles.Top}></div>
                             <div className={styles.Bottom}></div>
                             </div>
-                            
-                            <button className={styles.PayButton}>Pay $129,00</button>
+                            <div className={options.shipping === "true" ? styles.Checked : styles.CheckedHidden}>
+                            <CheckOutlined />
+                            <span>Billing address is same as shipping</span>
+                            </div>
+                            <button className={styles.PayButton}>Pay $65,00</button>
                         </div>
                         
                     </div>
