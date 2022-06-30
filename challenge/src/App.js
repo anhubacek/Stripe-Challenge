@@ -3,25 +3,30 @@ import './App.css';
 import Select from './components/Select';
 import Configure from './components/Configure';
 import Preview from './components/Preview';
+import { Options} from './components/Options';
 
 function App() {
   return (
+    
     <BrowserRouter>
+    
       <Routes>
       <Route 
             exact path='/'
-            element= {<Select/>}
+            element= {<Options><Select/> </Options>}
             />
       <Route 
             exact path='/configure'
-            element= {<Configure/>}
+            element= {<Options><Configure/> </Options>}
             />
       <Route 
             exact path='/preview'
-            element= {<Preview/>}
+            element= {<Options><Preview/> </Options>}
             />
       </Routes>
+      
     </BrowserRouter>
+   
   );
 }
 
