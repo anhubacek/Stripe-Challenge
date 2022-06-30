@@ -1,10 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState,  useEffect} from 'react'
 import styles from '../styles/preview.module.css'
 import { ArrowLeftOutlined, MobileOutlined, 
     InfoCircleFilled, DesktopOutlined } from '@ant-design/icons'
 import {Popover} from 'antd'
+import { useOptionsContext } from './Options'
 
 export default function Preview(){
+    const options = useOptionsContext()
+   useEffect(()=> console.log(options, "Options preview"), [options])
 
     const[back, setBack] = useState(false)
 

@@ -13,7 +13,7 @@ function App() {
       <Routes>
       <Route 
             exact path='/'
-            element= {<Options><Select/> </Options>}
+            element= {<Select/>}
             />
       <Route 
             exact path='/configure'
