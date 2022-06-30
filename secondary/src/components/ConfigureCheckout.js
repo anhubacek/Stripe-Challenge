@@ -13,10 +13,10 @@ export default function ConfigureCheckout (){
 
     })
    
-    console.log(options, "IFRAME OPTIONS")
+   // console.log(options, "IFRAME OPTIONS")
     useEffect(() => {
         const currentParams = Object.fromEntries([...searchParams]);
-        console.log(currentParams, "ESTO ES CURRENT PARAMS"); 
+       // console.log(currentParams, "ESTO ES CURRENT PARAMS"); 
         setOptions({
             color: currentParams.color,
             coupons: currentParams.coupons,
@@ -94,7 +94,38 @@ export default function ConfigureCheckout (){
 
                     </div> 
 
-                    <div className={styles.Right}></div>
+                    <div className={styles.Right}>
+                        <div className={styles.Content}>
+                            <div className={styles.TemplateOne}></div>
+                            <div className={styles.TemplateTwo}>
+                                <div className={styles.Line}></div>
+                                <div className={styles.Middle}></div>
+                                <div className={styles.Line}></div>
+                            </div>
+                            <div className={styles.TemplateMiddleShipping}>
+                                
+                            </div>
+                            <div className={styles.TemplateThree}>
+                            <div className={styles.Top}></div>
+                            <div className={styles.Bottom}></div>
+                            </div>
+                            <div className={styles.TemplateFour}>
+                            <div className={styles.Top}></div>
+                            <div className={styles.Bottom}></div>
+                            </div>
+                            <div className={styles.TemplateFive}>
+                            <div className={styles.Top}></div>
+                            <div className={styles.Bottom}></div>
+                            </div>
+                            <div className={styles.TemplateSix}>
+                            <div className={styles.Top}></div>
+                            <div className={styles.Bottom}></div>
+                            </div>
+                            
+                            <button className={styles.PayButton}>Pay $129,00</button>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
