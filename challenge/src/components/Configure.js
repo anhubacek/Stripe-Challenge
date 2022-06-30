@@ -103,7 +103,7 @@ export default function Configure(){
                 
                 </div>
             </div>
-            <a href={`/preview/${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`} className={styles.NextStep}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
+            <a href={`/preview${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`} className={styles.NextStep}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
             </div>
            
         </div>

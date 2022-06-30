@@ -4,10 +4,28 @@ import { ArrowLeftOutlined, MobileOutlined,
     InfoCircleFilled, DesktopOutlined } from '@ant-design/icons'
 import {Popover} from 'antd'
 import { useOptionsContext } from './Options'
+import { useParams, useSearchParams } from 'react-router-dom'
 
 export default function Preview(){
-    const options = useOptionsContext()
-   useEffect(()=> console.log(options, "Options preview"), [options])
+    // const options = useOptionsContext()
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [options, setOptions] = useState({
+        color: "Light",
+        coupons: false,
+        shipping:false,
+
+    })
+   useEffect(() => {
+    const currentParams = Object.fromEntries([...searchParams]);
+    console.log(currentParams, "CurrentParams preview principal "); 
+    setOptions({
+        color: currentParams.color,
+        coupons: currentParams.coupons,
+        shipping: currentParams.shipping,
+    })
+   
+ }, [searchParams]);
 
     const[back, setBack] = useState(false)
 
@@ -62,7 +80,8 @@ export default function Preview(){
         </div>
     
     <div className={styles.App}>
-            {/* <iframe src={option.oneTimePayments === true? "http://localhost:3001/onetimepayments": "http://localhost:3001/recurringpayments"} title="Recurring-Payments" width="100%" height="100%" scrolling='no'/> */}
+    <iframe src={`http://localhost:3001/preview${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === "true"? "&coupons=true": ""}${options.shipping === "true"? "&shipping=true": ""}`}
+             title="Configure-Checkout" width="100%" height="100%" scrolling='no'/> 
         </div>
     </div>
     )
