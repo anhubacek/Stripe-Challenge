@@ -1,17 +1,25 @@
-import React, { useState }  from 'react'
+import React, { useState, useContext }  from 'react'
 import styles from '../styles/configure.module.css'
 import {RightOutlined, InfoCircleFilled, ArrowLeftOutlined } from '@ant-design/icons'
 import {Switch, Popover} from 'antd'
+import {useOptionsContext, useOptionsUpdateColorContext, 
+    useOptionsUpdateCouponsContext, useOptionsUpdateShippingContext} from "./Options"
 
 
 
 export default function Configure(){
-    const [options, setOptions] = useState({
-        color: "Light",
-        coupons: false,
-        shipping: false,
+    // const [options, setOptions] = useState({
+    //     color: "Light",
+    //     coupons: false,
+    //     shipping: false,
 
-    })
+    // })
+
+
+    const options = useOptionsContext()
+    const updateColor = useOptionsUpdateColorContext()
+    const updateCoupons = useOptionsUpdateCouponsContext()
+    const updateShipping = useOptionsUpdateShippingContext()
     console.log("Options:", options)
 
     const[back, setBack] = useState(false)
@@ -24,28 +32,28 @@ export default function Configure(){
         setBack(false);
     }
 
-    function handleChangeColor(e){
-        setOptions({
-            ...options,
-            [e.target.name] : e.target.value
+    // function handleChangeColor(e){
+    //     setOptions({
+    //         ...options,
+    //         [e.target.name] : e.target.value
           
-        })
-    }
+    //     })
+    // }
 
     
-    const onChangeCoupons = (checked) => {
-        setOptions({
-            ...options,
-            coupons : checked
-        });
-      };
+    // const onChangeCoupons = (checked) => {
+    //     setOptions({
+    //         ...options,
+    //         coupons : checked
+    //     });
+    //   };
 
-      const onChangeShipping = (checked) => {
-        setOptions({
-            ...options,
-            shipping : checked
-        });
-      };
+    //   const onChangeShipping = (checked) => {
+    //     setOptions({
+    //         ...options,
+    //         shipping : checked
+    //     });
+    //   };
 
       
     return(
@@ -79,8 +87,8 @@ export default function Configure(){
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Customize Checkout's colors to match your brand." > <InfoCircleFilled /></Popover></div>
                     </div>
                     <div className={styles.ColorOptions}>
-                        <button className={styles.White} onFocus={handleChangeColor} name="color" value="Light"/>
-                        <button  className={styles.Blue} onFocus={handleChangeColor} name="color" value="Dark"/>
+                        <button className={styles.White} onFocus={updateColor} name="color" value="Light"/>
+                        <button  className={styles.Blue} onFocus={updateColor} name="color" value="Dark"/>
                     </div>
                 
                 </div>
@@ -89,7 +97,7 @@ export default function Configure(){
                         <span>Coupons</span>
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Create discount and promo codes to reward your most loyal customers." > <InfoCircleFilled /></Popover></div>
                     </div>
-                    <Switch size="small" className={styles.SwitchInput} name="coupons" onChange={onChangeCoupons} />
+                    <Switch size="small" className={styles.SwitchInput} name="coupons" onChange={updateCoupons} />
                 
                 </div>
                 <div className={styles.Option}>
@@ -97,7 +105,7 @@ export default function Configure(){
                         <span>Shipping</span>
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Collect your customer's shipping information and shipping method preference during checkout." > <InfoCircleFilled /></Popover></div>
                     </div>
-                    <Switch size="small" className={styles.SwitchInput} name="shipping" onChange={onChangeShipping} />
+                    <Switch size="small" className={styles.SwitchInput} name="shipping" onChange={updateShipping} />
                 
                 </div>
                 <div className={styles.OptionLeft}>
