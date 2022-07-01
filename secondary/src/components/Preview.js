@@ -1,4 +1,4 @@
-import {React, useEffect, useState}  from 'react'
+import {React, useEffect, useState, useContext}  from 'react'
 import { useParams, useSearchParams } from 'react-router-dom'
 import styles from '../styles/Preview.module.css'
 import {TrademarkCircleFilled, ArrowLeftOutlined, DownOutlined,
@@ -24,6 +24,7 @@ export default function Preview (){
         })
        
      }, [searchParams]);
+
  
     return(
         <div className={styles.ConfigureCheckout}>
@@ -69,27 +70,30 @@ export default function Preview (){
                             </div>
                         </div>
                         <div className={options.coupons === "true"|| options.shipping === "true"? styles.CouponsTop : styles.CouponsTopHidden}>
-                            <div className={styles.GrayTemplate}></div>
-                            <div className={styles.GrayTemplate}></div>
+                            <div className={styles.GrayTemplate}>Subtotal</div>
+                            <div className={styles.GrayTemplate}>$129,00</div>
                         </div>
                         <div className={options.coupons === "true" ? styles.CouponsButton : styles.CouponsButtonHidden}>
                             <span>Add promotion code</span>
                         </div>
                         <div className={options.shipping === "true"? styles.Shipping : styles.ShippingHidden}>
                             <div className={styles.ShippingDetails}>
-                                <span>Free Shipping</span>
-                                <span>5-7 business days</span>
+                                <span>Shipping</span>
+                                <p>Free Shipping (5-7 business days)</p>
                             </div>
                                 <span>Free</span>
                         </div>
                         <div className={options.coupons === "true"|| options.shipping === "true"? styles.CouponsBottom : styles.CouponsBottomHidden}>
-                            <div className={styles.GrayTemplate}></div>
-                            <div className={styles.GrayTemplate}></div>
+                            <div className={styles.GrayTemplate}>Total due</div>
+                            <div className={styles.GrayTemplate}>$129,00</div>
                         </div>
                         <div className={styles.Footer}>
-                            <div className={styles.GrayTemplate}></div>
+                            {/* <div className={styles.GrayTemplate}>Powered by</div>  */}
+                            <span>Powered by</span>
+                            <span className={styles.Stripe}>stripe</span>
                             <span>|</span>
-                            <div className={styles.GrayTemplate}></div>
+                            <span>Terms privacy</span>
+                            {/* <div className={styles.GrayTemplate}>Terms  Privacy</div> */}
                         </div>
 
 
@@ -97,18 +101,18 @@ export default function Preview (){
 
                     <div className={styles.Right}>
                         <div className={styles.Content}>
-                            <div className={styles.TemplateOne}></div>
+                            <div className={styles.TemplateOne}>Pay</div>
                             <div className={styles.TemplateTwo}>
                                 <div className={styles.Line}></div>
-                                <div className={styles.Middle}></div>
+                                <div className={styles.Middle}>Or pay with card</div>
                                 <div className={styles.Line}></div>
                             </div>
                             <div className={options.shipping === "true" ? styles.TemplateMiddle : styles.TemplateMiddleHidden}>
-            
+                                Shipping information
                             </div>
                             <div className={styles.TemplateThree}>
-                            <div className={styles.Top}></div>
-                            <div className={styles.Bottom}></div>
+                            <div className={styles.Top}>Email</div>
+                            <input type="text" className={styles.Bottom}/>
                             </div>
                             <div className={options.shipping === "true" ? styles.Shipping : styles.ShippingHidden}>
                             <label className={styles.AddressLabel}>Shipping Adress</label>
