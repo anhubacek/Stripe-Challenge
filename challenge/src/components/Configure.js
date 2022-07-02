@@ -37,9 +37,7 @@ export default function Configure(){
                 </div>
                 
             </div>
-            <div className={styles.NavBarRight}>
-            <ArrowLeftOutlined className={styles.LeftArrow}/>
-            <div className={styles.NavBarSubheading}>
+                        <div className={styles.NavBarSubheading}>
             
                         <span className={styles.CurrentText}>Customize</span>
                         <p>2 of 3</p>
@@ -50,6 +48,9 @@ export default function Configure(){
                          onMouseEnter={mouseOver} onMouseLeave={mouseOut}> Back</span>
                          </a>
                     </div>
+            <div className={styles.NavBarRight}>
+            <ArrowLeftOutlined className={styles.LeftArrow}/>
+
             <div className={styles.OptionsDashboard}>
                 <div className={styles.OptionLeft}>
                     <div className={styles.OptionName}>
@@ -103,12 +104,12 @@ export default function Configure(){
                 
                 </div>
             </div>
-            <a href={`/preview${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`} className={styles.NextStep}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
-            </div>
            
+            </div>
+            <a href={`/preview${options.color === "Dark" ? "?color=Dark" : "?color=Light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`} className={styles.NextStep}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
         </div>
     <div className={styles.App}>
-             <iframe src={`http://localhost:3001/configurecheckout${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`}
+             <iframe src={`http://localhost:3001/configurecheckout${options.color === "Dark" ? "?color=Dark" : "?color=Light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`}
              title="Configure-Checkout" width="100%" height="100%" scrolling='no'/> 
         </div>
     </div>

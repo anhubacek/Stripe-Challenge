@@ -1,5 +1,7 @@
+@media screen and (min-width: 768px){
+
 .ConfigurePage {
-    height: 1000px;
+    height: auto;
    
 }
 .ConfigurePage .NavBarContent{
@@ -8,46 +10,52 @@
     justify-content: flex-start;
     height: 220px;
     margin-left: 30px;
-    padding-top: 45px;
+    padding-top: 20px;
 }
 .ConfigurePage .App{
-    height: 800px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
     background-color: var(--greyBackground);
 }
 .ConfigurePage .App iframe{
     border: none;
+    margin-top:50px;
+    width: 700px;
+    height: 520px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(153, 153, 153, 0.856);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 .ConfigurePage .NavBarContent .NavBarLeft .NavBarTitle{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 900;
     font-size: 13px;
+ left: -20px;
 }
 .ConfigurePage .NavBarContent .NavBarLeft{
-    margin-top: 18px;
+    margin-top: 10px;
 }
 
-.ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading{
+.ConfigurePage .NavBarContent .NavBarSubheading{
     display: flex;
     flex-direction: row;
-    position: absolute;
-    left: 30px;
     align-items: center;
     margin-top: 0px; 
 }
-.ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading {
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading span{
+
+.ConfigurePage .NavBarContent .NavBarSubheading span{
     margin: 0px;
     font-size: 15px;
     font-weight: 500;
 }
 
-.ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading  p{
+.ConfigurePage .NavBarContent  .NavBarSubheading  p{
     margin: 0px 8px;
     font-size: 13px;
     color: var(--text-gray);
@@ -64,11 +72,12 @@
 }
 
 
-.ConfigurePage .NavBarContent .NavBarRight .NextStep{
+.ConfigurePage .NavBarContent  .NextStep{
     display: flex;
     align-self: flex-end;
     position: absolute;
     right: 30px;
+    top: 130px;
     text-decoration: none;
     padding: 6px 10px;
     background-color: var(--borderBlue);
@@ -86,12 +95,12 @@
     font-family: 'Poppins', sans-serif;
     }
     
-    .ConfigurePage .NavBarContent .NavBarRight .NextStep .NextIcon{
+    .ConfigurePage .NavBarContent  .NextStep .NextIcon{
         font-size: 12px;
         margin-left: 8px;
     }
     
-    .ConfigurePage .NavBarContent .NavBarRight .NextStep:focus{
+    .ConfigurePage .NavBarContent  .NextStep:focus{
         outline: solid 2px var(--borderLight);
     }
 
@@ -100,20 +109,19 @@
         flex-direction: row;
         flex-wrap: wrap;
         width: 900px;
-        justify-content: center;
-            font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
-    }
+        justify-content: flex-start;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        }
 
     .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .OptionLeft{
         display: flex;
         flex-direction: row;
-        width: 250px;
+        width: 220px;
         justify-content: space-between;
         margin-top: 10px;
         margin-bottom:10px;
-        margin-right: 20px;
     }
     .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .OptionLeft .OptionName{
         display: flex;
@@ -178,7 +186,7 @@
     .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .Option{
         display: flex;
         flex-direction: row;
-        width: 180px;
+        width: 220px;
         justify-content: space-between;
         margin:10px 30px;
     }
@@ -203,39 +211,296 @@
        
         
     }
-    .ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading .BackLink {
+    .ConfigurePage .NavBarContent .NavBarSubheading .BackLink {
         display: flex;
         flex-direction: row;
     }
-    .ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading .BackLink .BackNone{
+    .ConfigurePage .NavBarContent .NavBarSubheading .BackLink .BackNone{
         position:absolute;
-        left: 0px;
-        top: 0px;
+        left: 30px;
+        top:85px;
         cursor: pointer;
         opacity: 0;
         transition-property: opacity;
         transition-duration: 0.2s;
         transition-timing-function: ease;
         width: 250px;
+        z-index: 100;
     }
 
-    .ConfigurePage .NavBarContent .NavBarRight .NavBarSubheading .BackLink .BackText{
+    .ConfigurePage .NavBarContent .NavBarSubheading .BackLink .BackText{
         background-color: white;
         position:absolute;
-        left: 0px;
-        top: 0px;
+        left: 30px;
+        top: 85px;
         color:black;
         width: 250px;
         transition: 0.2s;
         opacity: 100%;
         cursor: pointer;
         font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
+        font-size: 16px;
+        font-weight: 600;
     }
     .LeftArrow{
         position: absolute;
         left: 10px;
-        top: 120px;
+        top: 90px;
         color: var(--icon-gray);
     }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 765px){
+    .ConfigurePage .App{
+        display:none;
+    }
+
+    .ConfigurePage {
+        height: auto;
+       
+    }
+    .ConfigurePage .NavBarContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 220px;
+        margin-left: 30px;
+        margin-top: 35px;
+    }
+    .ConfigurePage .App{
+        height: 800px;
+        background-color: var(--greyBackground);
+    }
+    .ConfigurePage .App iframe{
+        border: none;
+    }
+    
+    .ConfigurePage .NavBarContent .NavBarLeft .NavBarTitle{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 900;
+        font-size: 13px;
+    }
+    .ConfigurePage .NavBarContent .NavBarLeft{
+        margin-top: 10px;
+    }
+    
+    .ConfigurePage .NavBarContent .NavBarSubheading{
+        display: flex;
+        flex-direction: row;
+        /* position: absolute;
+        left: 30px; */
+        align-items: center;
+        margin-top: 0px; 
+    }
+
+    .ConfigurePage .NavBarContent .NavBarSubheading span{
+        margin: 0px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .ConfigurePage .NavBarContent  .NavBarSubheading  p{
+        margin: 0px 8px;
+        font-size: 13px;
+        color: var(--text-gray);
+        
+    }
+    
+    .ConfigurePage .NavBarContent .NavBarRight{
+        display: flex;
+        margin-top:0px;
+        margin-bottom: 20px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    
+    .ConfigurePage .NavBarContent .NextStep{
+        position: absolute;
+        left: 30px;
+        bottom: 40px;
+        text-decoration: none;
+        padding: 6px 10px;
+        background-color: var(--borderBlue);
+        border-radius: 4px;
+        margin: 1rem 0;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 24px;
+        align-items: center;
+        box-shadow: var(--shadow-button);
+        cursor: pointer;
+        transition: var(--outline-transition);
+        font-family: 'Poppins', sans-serif;
+        }
+        
+        .ConfigurePage .NavBarContent .NextStep .NextIcon{
+            font-size: 12px;
+            margin-left: 8px;
+        }
+        
+        .ConfigurePage .NavBarContent  .NextStep:focus{
+            outline: solid 2px var(--borderLight);
+        }
+    
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard{
+            display:flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 900px;
+            justify-content: flex-start;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            }
+    
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .OptionLeft{
+            display: flex;
+            flex-direction: row;
+            max-width: 400px;
+            justify-content: space-between;
+            margin-top: 15px;
+            margin-bottom:15px;
+        }
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .OptionLeft .OptionName{
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+            align-items: center;
+        }
+    
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .OptionLeft .OptionName span{
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            margin-right: 7px;
+        }
+    
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .OptionLeft .OptionName .InfoIcon {
+            color: var(--icon-gray);
+            align-items: center; 
+            
+        }
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .OptionLeft .ColorOptions .White{
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            margin-left: 10px;
+            border:solid 0.5px var(--blue-mode);
+            background-color: white;
+            cursor:pointer;
+            transition: outline .2s ease;
+            transition-property: outline;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+        }
+    
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .OptionLeft .ColorOptions .White:focus{
+            outline: solid 4px var(--outline-color);
+            border:solid 1px var(--outline-color);
+            
+        }
+    
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .OptionLeft .ColorOptions .Blue{
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            margin-left: 10px;
+            border:solid 0.5px var(--blue-mode);
+            background-color: var(--blue-mode);
+            cursor:pointer;
+            transition: outline .2s ease;
+            transition-property: outline;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+        }
+    
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .OptionLeft .ColorOptions .Blue:focus{
+            outline: solid 4px var(--outline-color);
+            border:solid 1px var(--outline-color);
+        }
+    
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .Option{
+            display: flex;
+            flex-direction: row;
+            max-width: 400px;
+            justify-content: space-between;
+            margin:15px 0px;
+        }
+    
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard  .Option .OptionName{
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+            align-items: center;
+        }
+    
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .Option .OptionName span{
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            margin-right: 7px;
+        }
+    
+        .ConfigurePage .NavBarContent .NavBarRight .OptionsDashboard .Option .OptionName .InfoIcon {
+            color: var(--icon-gray);
+            align-items: center;
+           
+            
+        }
+        .ConfigurePage .NavBarContent .NavBarSubheading .BackLink {
+            display: flex;
+            flex-direction: row;
+        }
+        .ConfigurePage .NavBarContent .NavBarSubheading .BackLink .BackNone{
+            position:absolute;
+            left: 30px;
+            top:100px;
+            cursor: pointer;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+            width: 250px;
+            z-index: 100;
+        }
+    
+        .ConfigurePage .NavBarContent .NavBarSubheading .BackLink .BackText{
+            background-color: white;
+            position:absolute;
+            left: 30px;
+            top: 100px;
+            color:black;
+            width: 250px;
+            transition: 0.2s;
+            opacity: 100%;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .LeftArrow{
+            position: absolute;
+            left: 10px;
+            top: 100px;
+            color: var(--icon-gray);
+        }
+    
+}

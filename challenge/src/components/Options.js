@@ -32,6 +32,7 @@ export function Options({children}){
     });
 
     function handleChangeColor(e){
+        e.preventDefault();
         setOptions({
             ...options,
             [e.target.name] : e.target.value
