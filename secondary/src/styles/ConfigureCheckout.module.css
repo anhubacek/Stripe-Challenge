@@ -1,22 +1,20 @@
 .ConfigureCheckout{
-
-    width: 100%;
-    height: 1000px;
     display: flex;
+    background-color: rgb(245, 248, 250);
+    height: fit-content;
     justify-content: center;
-    background-color: var(--greyBackground);
+    width: 100%;
 }
 
 
 .ConfigureCheckout .Content{
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
-    width: 730px;
-    height: 550px;
     border-radius: 10px;
-    box-shadow: 0px 10px 30px rgba(153, 153, 153, 0.856);
     background-color: white;
+    height: 520px;
+    display: flex;
+    justify-content: center;
 }
 
 .ConfigureCheckout .Content .Bar{

@@ -116,45 +116,59 @@ export default function Preview (){
                             </div>
                             <div className={options.shipping === "true" ? styles.Shipping : styles.ShippingHidden}>
                             <label className={styles.AddressLabel}>Shipping Adress</label>
-                                <div className={styles.Name}>Name</div>
-                                <div className={styles.Country}><span>United States</span> <DownOutlined /></div>
-                                <div className={styles.AddressInput}>Address</div>
-                                <label className={styles.EnterAddressLabel}>Enteradress manually</label>
+                                <input type="text" className={styles.Name} placeholder="Name"/>
+                                <select className={styles.Country}type="select"  defaultValue="United States" >
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="United States">United States</option>
+                                 </select>
+                                <input type="text" className={styles.AddressInput} placeholder="Address"/>
+                                <label className={styles.EnterAddressLabel}>Enter adress manually</label>
                                 <label className={styles.MethodLabel}>Shipping Method</label>
                                 <div className={styles.Free}>
-                                    <div className={styles.Left}> </div>
+                                    <input type="radio" className={styles.Left}/>
                                     <div className={styles.Middle}>
                                         <span>Free Shipping</span>
                                         <p>5-7 business days</p>
                                     </div>
-                                    <div className={styles.Right}>Free</div>
+                                    <div className={styles.RightShipping}>Free</div>
                                 </div>
                                 <div className={styles.Next}>
-                                    <div className={styles.Left}></div>
+                                <input type="radio"className={styles.Left}/>
                                     <div className={styles.Middle}>
                                     <span>Next day air</span>
                                         <p>1 business days</p>
                                     </div>
-                                    <div className={styles.Right}>$15,00</div>
+                                    <div className={styles.RightShipping}>$15,00</div>
                                 </div>
                             </div>
-                            <div className={options.shipping === "true" ? styles.TemplateFourHidden : styles.TemplateFour}>
-                            <div className={styles.Top}></div>
-                            <div className={styles.Bottom}></div>
+                            <div className={options.shipping === "true" ? styles.PaymentDetails : styles.styles.PaymentDetailsHidden}>
+                                Payment details
+                            </div>
+                            <div className={styles.TemplateFour}>
+                            <div className={styles.Top}>Card information</div>
+                            <input type="text" className={styles.Bottom}/>
+                            <div className={styles.Other}>
+                            <input type="text" className={styles.Data1}/>
+                            <input type="text" className={styles.Data2}/>
+                            </div>
                             </div>
                             <div className={options.shipping === "true" ? styles.TemplateFiveHidden : styles.TemplateFive}>
-                            <div className={styles.Top}></div>
-                            <div className={styles.Bottom}></div>
+                            <div className={styles.Top}>Name on card</div>
+                            <input type="text" className={styles.Bottom}/>
                             </div>
-                            <div className={styles.TemplateSix}>
-                            <div className={styles.Top}></div>
-                            <div className={styles.Bottom}></div>
+                            <div className={options.shipping === "true" ? styles.TemplateSixHidden :styles.TemplateSix}>
+                            <div className={styles.Top}>Country or region</div>
+                            <select className={styles.Country}type="select"  defaultValue="United States" >
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="United States">United States</option>
+                                 </select>
+                            <input type="text" placeholder="ZIP" className={styles.Bottom}/>
                             </div>
                             <div className={options.shipping === "true" ? styles.Checked : styles.CheckedHidden}>
-                            <CheckOutlined />
+                            {/* <input type="checkbox"/> */}
                             <span>Billing address is same as shipping</span>
                             </div>
-                            <button className={styles.PayButton}>Pay $65,00</button>
+                            <button className={styles.PayButton}>Pay</button>
                         </div>
                         
                     </div>
