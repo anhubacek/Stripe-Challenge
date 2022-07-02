@@ -141,7 +141,7 @@ export default function Preview (){
                                     <div className={styles.RightShipping}>$15,00</div>
                                 </div>
                             </div>
-                            <div className={options.shipping === "true" ? styles.PaymentDetails : styles.styles.PaymentDetailsHidden}>
+                            <div className={options.shipping === "true" ? styles.PaymentDetails : styles.PaymentDetailsHidden}>
                                 Payment details
                             </div>
                             <div className={styles.TemplateFour}>
@@ -165,7 +165,7 @@ export default function Preview (){
                             <input type="text" placeholder="ZIP" className={styles.Bottom}/>
                             </div>
                             <div className={options.shipping === "true" ? styles.Checked : styles.CheckedHidden}>
-                            {/* <input type="checkbox"/> */}
+                            <input type="checkbox"/>
                             <span>Billing address is same as shipping</span>
                             </div>
                             <button className={styles.PayButton}>Pay</button>
