@@ -1,6 +1,6 @@
-
+@media screen and (min-width: 768px){
 .SelectPage {
-    height: 1000px;
+    height: auto;
    
 }
 .SelectPage .NavBarContent{
@@ -8,45 +8,54 @@
     flex-direction: column;
     justify-content: flex-start;
     height: 220px;
-    padding-top: 45px;
+    padding-top: 20px;
 }
 .SelectPage .NavBarContent .NavBarLeft{
-    margin-top: 18px;
+    margin-top: 10px;
 }
 .SelectPage .NavBarContent .NavBarLeft .NavBarTitle{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 900;
     font-size: 13px;
 }
-.SelectPage .NavBarContent .NavBarRight .NavBarSubheading{
+.SelectPage .NavBarContent .NavBarSubheading{
     display: flex;
     flex-direction: row;
-    position: absolute;
-    left: 30px;
     align-items: center;
     margin-top: 0px; 
-    
+    margin-left: 30px;
 }
 
-.SelectPage .NavBarContent .NavBarRight .NavBarSubheading span{
+.SelectPage .NavBarContent .NavBarSubheading span{
     margin: 0px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 500;
 }
 
-.SelectPage .NavBarContent .NavBarRight .NavBarSubheading p{
+.SelectPage .NavBarContent  .NavBarSubheading  p{
     margin: 0px 8px;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--text-gray);
-    font-family: 'Montserrat', sans-serif;
     
 }
 .SelectPage .App{
-    height: 800px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--greyBackground);
 }
 .SelectPage .App iframe{
     border: none;
+    margin-top:50px;
+    width: 700px;
+    height: 500px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(153, 153, 153, 0.856);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 .SelectPage .NavBarContent .NavBarRight{
     display: flex;
@@ -55,7 +64,7 @@
     width: 100%;
     flex-direction: row;
     justify-content: center;
-    /* align-items: stretch; */
+    margin-top: 10px
 }
 .SelectPage .NavBarContent .NavBarRight .SelectButton{
     display: flex;
@@ -166,11 +175,10 @@
     background-color: var(--greyBackground);
 }
 
-.SelectPage .NavBarContent .NavBarRight .NextStep{
-display: flex;
-align-self: flex-end;
+.SelectPage .NavBarContent .NextStep{
 position: absolute;
 right: 30px;
+top: 130px;
 text-decoration: none;
 padding: 6px 10px;
 background-color: var(--borderBlue);
@@ -188,22 +196,21 @@ transition: var(--outline-transition);
 font-family: 'Poppins', sans-serif;
 }
 
-.SelectPage .NavBarContent .NavBarRight .NextStep .NextIcon{
+.SelectPage .NavBarContent  .NextStep .NextIcon{
     font-size: 12px;
     margin-left: 8px;
 }
 
-.SelectPage .NavBarContent .NavBarRight .NextStep:focus{
+.SelectPage .NavBarContent  .NextStep:focus{
     outline: solid 2px var(--borderLight);
 }
 
-.SelectPage .NavBarContent .NavBarRight .disabled {
+.SelectPage .NavBarContent .disabled {
     pointer-events: none;
     cursor:none;
-    display: flex;
-    align-self: flex-end;
     position: absolute;
     right: 30px;
+    top: 130px;
     text-decoration: none;
     padding: 6px 10px;
     background-color: var(--borderBlue);
@@ -220,7 +227,261 @@ font-family: 'Poppins', sans-serif;
     transition: var(--outline-transition);
     font-family: 'Poppins', sans-serif;
   }
-  .SelectPage .NavBarContent .NavBarRight .disabled .NextIcon{
+  .SelectPage .NavBarContent  .disabled .NextIcon{
     font-size: 12px;
     margin-left: 8px;
+}
+}
+
+
+@media screen and (max-width: 765px){
+    .SelectPage .App{
+        display:none;
+    }
+
+    .SelectPage {
+        height: auto;
+       
+    }
+    .SelectPage .NavBarContent {
+        margin-top: 35px;
+    }
+    .SelectPage .NavBarContent .NavBarLeft{
+    margin-top: 10px;
+}
+.SelectPage .NavBarContent .NavBarLeft .NavBarTitle{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+}
+.SelectPage .NavBarContent .NavBarSubheading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px; 
+    margin-left: 30px;
+}
+
+.SelectPage .NavBarContent .NavBarSubheading span{
+    margin: 0px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.SelectPage .NavBarContent  .NavBarSubheading  p{
+    margin: 0px 8px;
+    font-size: 13px;
+    color: var(--text-gray);
+    
+}
+
+    .SelectPage .NavBarContent .NavBarSubheading .BackLink {
+        display: flex;
+        flex-direction: row;
+    }
+    .SelectPage .NavBarContent .NavBarSubheading .BackLink .BackNone{
+        position:absolute;
+        left: 30px;
+        top:85px;
+        cursor: pointer;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        width: 250px;
+        z-index: 100;
+    }
+
+    .SelectPage .NavBarContent .NavBarSubheading .BackLink .BackText{
+        background-color: white;
+        position:absolute;
+        left: 30px;
+        top: 85px;
+        color:black;
+        width: 250px;
+        transition: 0.2s;
+        opacity: 100%;
+        cursor: pointer;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .LeftArrow{
+        position: absolute;
+        left: 10px;
+        top: 90px;
+        color: var(--icon-gray);
+    }
+    .SelectPage .NavBarContent .NavBarRight{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .SelectPage .NavBarContent .NavBarRight .SelectButton{
+        display: flex;
+        flex-direction: row;
+        min-width: 300px;
+        max-width: 500px;
+        height: 65px;
+        background-color: white;
+        border: solid 1px var(--borderButtons1);
+        border-radius: 7px;
+        margin-top:15px;
+        transition-delay: 50ms;
+        cursor: pointer;
+        margin-left: 30px;
+        margin-right: 30px;
+        
+    
+    }
+    .SelectPage .NavBarContent .NavBarRight .SelectButton .Text{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 5px;
+        align-self: center;
+        
+    }
+    .SelectPage .NavBarContent .NavBarRight .SelectButton h3{
+        font-weight: 200;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 4px;
+        margin-top: 4px;
+        color: var(--textDefault);
+        text-align: left;
+    }
+    
+    .SelectPage .NavBarContent .NavBarRight .SelectButton p{
+        font-weight: 200;
+        font-size: 12px;
+        font-family: 'Poppins', sans-serif;
+        margin: 0px;
+        color: var(--textGrey);
+        text-align: left;
+    }
+    
+    .SelectPage .NavBarContent .NavBarRight .SelectButton .Icon{
+        position: relative;
+        top: 5px;
+        margin: 5px;
+        color: var(--textGrey);
+        font-size: 14px;
+        
+        }
+        .SelectPage .NavBarContent .NavBarRight .Selected{
+        border: solid 2px var(--borderBlue);
+        outline: solid 3px var(--borderLight);
+        display: flex;
+        flex-direction: row;
+        min-width: 300px;
+        max-width: 500px;
+        height: 65px;
+        background-color: white;
+        border: solid 1px var(--borderButtons1);
+        border-radius: 7px;
+        margin-top:15px;
+        transition-delay: 50ms;
+        cursor: pointer;
+        margin-left: 30px;
+        margin-right: 30px;
+        
+        }
+        .SelectPage .NavBarContent .NavBarRight .Selected .Text{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 5px;
+        align-self: center;
+        
+    }
+    .SelectPage .NavBarContent .NavBarRight .Selected h3{
+        font-weight: 200;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 4px;
+        margin-top: 4px;
+        color: var(--textDefault);
+        text-align: left;
+    }
+    
+    .SelectPage .NavBarContent .NavBarRight .Selected p{
+        font-weight: 200;
+        font-size: 12px;
+        font-family: 'Poppins', sans-serif;
+        margin: 0px;
+        color: var(--textGrey);
+        text-align: left;
+    }
+    
+    
+        .SelectPage .NavBarContent .NavBarRight .Selected .Icon{
+        position: relative;
+        top: 5px;
+        margin: 5px;
+        font-size: 14px;
+        color: var(--borderBlue)
+        }
+    
+    .SelectPage .NavBarContent .NavBarLeft{
+        margin-left:30px;
+    }
+    
+    
+    .SelectPage .NavBarContent .NextStep{
+        position: absolute;
+        left: 30px;
+        text-decoration: none;
+        padding: 6px 10px;
+        background-color: var(--borderBlue);
+        border-radius: 4px;
+        margin: 1rem 0;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 24px;
+        align-items: center;
+        box-shadow: var(--shadow-button);
+        cursor: pointer;
+        transition: var(--outline-transition);
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .SelectPage .NavBarContent .NextStep .NextIcon{
+        font-size: 12px;
+        margin-left: 8px;
+    }
+    
+    .SelectPage .NavBarContent .NextStep:focus{
+        outline: solid 2px var(--borderLight);
+    }
+    
+    .SelectPage .NavBarContent  .disabled {
+        pointer-events: none;
+        cursor:none;
+        position: absolute;
+        left: 30px;
+        text-decoration: none;
+        padding: 6px 10px;
+        background-color: var(--borderBlue);
+        border-radius: 4px;
+        margin: 1rem 0;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 24px;
+        align-items: center;
+        box-shadow: var(--shadow-button);
+        cursor: pointer;
+        transition: var(--outline-transition);
+        font-family: 'Poppins', sans-serif;
+        }
+        .SelectPage .NavBarContent  .disabled .NextIcon{
+        font-size: 12px;
+        margin-left: 8px;
+    
+    }
+        
 }

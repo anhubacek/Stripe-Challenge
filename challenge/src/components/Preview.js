@@ -3,12 +3,14 @@ import styles from '../styles/preview.module.css'
 import { ArrowLeftOutlined, MobileOutlined, 
     InfoCircleFilled, DesktopOutlined } from '@ant-design/icons'
 import {Popover} from 'antd'
-import { useOptionsContext } from './Options'
+
 import { useParams, useSearchParams } from 'react-router-dom'
 
-export default function Preview(){
-    // const options = useOptionsContext()
 
+
+
+export default function Preview(){
+   
     const [searchParams, setSearchParams] = useSearchParams();
     const [options, setOptions] = useState({
         color: "Light",
@@ -68,7 +70,7 @@ export default function Preview(){
                      <button className={styles.Left}><DesktopOutlined /></button>
                      <button className={styles.Right}><MobileOutlined /></button>
                 </div>
-                <button className={styles.Language}> <label>Customer location  <Popover  ><InfoCircleFilled/></Popover> | </label>
+                <button className={styles.Language}> <label>Customer location  <Popover content="Checkout adapts to your costumer's location and preferences to show the language and payment methods most likely to increase conversion." className={styles.Popover}><InfoCircleFilled/></Popover> | </label>
                 <select type="select"  onChange={handleChange} defaultValue="United States">
                     <option value="Argentina">Argentina</option>
                     <option value="United States">United States</option>
@@ -81,7 +83,7 @@ export default function Preview(){
     
     <div className={styles.App}>
     <iframe src={`http://localhost:3001/preview${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === "true"? "&coupons=true": ""}${options.shipping === "true"? "&shipping=true": ""}`}
-             title="Configure-Checkout" width="100%" height="100%" scrolling='no'/> 
+             title="Configure-Checkout" width="100%" height="100%" scrolling={options.shipping === "true" ? "yes" : "no"}/> 
         </div>
     </div>
     )

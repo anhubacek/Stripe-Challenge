@@ -27,11 +27,12 @@ export default function Select(){
                     </div>
                     
                 </div>
-                <div className={styles.NavBarRight}>
                 <div className={styles.NavBarSubheading}>
                             <span>Choose your use case</span>
                             <p>1 of 3</p>
                         </div>
+                <div className={styles.NavBarRight}>
+               
                 <button className={option.oneTimePayments === true? styles.Selected:styles.SelectButton} onFocus={handleFocus} value="oneTimePayments" >
                     <div className={styles.Icon}>
                     <DollarCircleFilled />
@@ -50,9 +51,9 @@ export default function Select(){
                         <p>Subscription or SaaS business</p>
                     </div>
                 </button>
-                <a href={option.oneTimePayments === true? "/configure": "/"} className={option.oneTimePayments === true ? styles.NextStep : styles.disabled}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
+              
                 </div>
-               
+                <a href={option.oneTimePayments === true? "/configure": "/"} className={option.oneTimePayments === true ? styles.NextStep : styles.disabled}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
             </div>
         <div className={styles.App}>
             <iframe src={option.oneTimePayments === true? "http://localhost:3001/onetimepayments": "http://localhost:3001/recurringpayments"} title="Recurring-Payments" width="100%" height="100%" scrolling='no'/>
