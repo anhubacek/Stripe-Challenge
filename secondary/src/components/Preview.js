@@ -13,6 +13,16 @@ export default function Preview (){
         shipping:false,
 
     })
+    const [device, setDevice] = useState({
+        desktop: true,
+        mobile: false
+    })
+
+    const [input, setInput] = useState({
+        email: "",
+    })
+
+    const [errors, setErrors] = useState({})
     useEffect(() => console.log(options, "Preview Iframe Options"))
     useEffect(() => {
         const currentParams = Object.fromEntries([...searchParams]);
@@ -22,10 +32,22 @@ export default function Preview (){
             coupons: currentParams.coupons,
             shipping: currentParams.shipping,
         })
+        setDevice({
+            desktop: currentParams.desktop,
+            mobile: currentParams.cel
+        })
        
      }, [searchParams]);
 
- 
+     
+     function handleChange(e){
+        e.preventDefault();
+        setInput({
+            ...input,
+            [e.target.name] : e.target.value
+        })
+        console.log(input)
+     }
     return(
         <div className={styles.ConfigureCheckout}>
             <div className={styles.Content}>
@@ -39,14 +61,28 @@ export default function Preview (){
                     <span><LockFilled className={styles.LockedIcon}/> checkoutstripe.com</span>
                     </div>
                 </div>
+                <div className={styles.ResponsiveHeader}>
+                        <ArrowLeftOutlined className={styles.LeftArrow}/>
+                        <div className={styles.BrandIcon}>R</div>
+                        <span>Rebill</span>
+                        <p>TEST MODE</p>
+                        </div>
                 <div className={styles.Checkout}>
                     <div className={options.color === "Light" ? styles.LightLeft : styles.DarkLeft}>
+                    <div className={styles.ResponsiveLeft}>
+                    <div className={styles.BigItems} >
+                            <div className={styles.ImgItems} >
+
+                            </div>
+                        </div>
+                    </div>
                         <div className={styles.Logo}>
                         <ArrowLeftOutlined className={styles.LeftArrow}/>
                         <div className={styles.BrandIcon}>R</div>
                         <span>Rebill</span>
                         <p>TEST MODE</p>
                         </div>
+                       
                         <div className={styles.Price}>
                             <div className={styles.GrayTemplate}>Pay Rebill</div>
                             <span>$129,00</span>
@@ -88,17 +124,15 @@ export default function Preview (){
                             <div className={styles.GrayTemplate}>$129,00</div>
                         </div>
                         <div className={styles.Footer}>
-                            {/* <div className={styles.GrayTemplate}>Powered by</div>  */}
                             <span>Powered by</span>
                             <span className={styles.Stripe}>stripe</span>
                             <span>|</span>
                             <span>Terms privacy</span>
-                            {/* <div className={styles.GrayTemplate}>Terms  Privacy</div> */}
                         </div>
 
 
                     </div> 
-
+                    
                     <div className={styles.Right}>
                         <div className={styles.Content}>
                             <div className={styles.TemplateOne}>Pay</div>
@@ -112,7 +146,16 @@ export default function Preview (){
                             </div>
                             <div className={styles.TemplateThree}>
                             <div className={styles.Top}>Email</div>
-                            <input type="text" className={styles.Bottom}/>
+                            <input type="text" 
+                            name="email" 
+                            autoComplete='off' 
+                            value={input.email}
+                            onChange={handleChange}
+                            className={!input.email || !input.email.match(
+                            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i )? styles.ErrorInput : styles.Bottom}/>
+                            { !input.email ? <p className={styles.Errors}>Please complete your email.</p> : null}
+                            { input.email && !input.email.match(
+                            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i ) ? <p className={styles.Errors}>Please enter a valid email.</p> : null}
                             </div>
                             <div className={options.shipping === "true" ? styles.Shipping : styles.ShippingHidden}>
                             <label className={styles.AddressLabel}>Shipping Adress</label>
@@ -172,6 +215,15 @@ export default function Preview (){
                         </div>
                         
                     </div>
+                    <div className={styles.ResponsiveFooter}>
+                        <div className={styles.TopResponsiveFooter}>
+                            <span>Powered by </span>
+                            <span className={styles.Stripe}>stripe</span>
+                            </div>
+                            <div className={styles.BottomResponsiveFooter}>    
+                            <span>Terms privacy</span>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
