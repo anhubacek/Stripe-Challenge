@@ -18,6 +18,12 @@ export default function Preview(){
         shipping:false,
 
     })
+
+    const [device, setDevice] = useState({
+        desktop: true,
+        mobile: false
+    })
+
    useEffect(() => {
     const currentParams = Object.fromEntries([...searchParams]);
     console.log(currentParams, "CurrentParams preview principal "); 
@@ -39,9 +45,20 @@ export default function Preview(){
         setBack(false);
     }
 
-    function handleChange(){
-
+    function handleFocusDevice(e){
+        setDevice({
+            ...device,
+            [e.target.name] : true,
+        })
     }
+    function handleBlurDevice(e){
+        setDevice({
+            ...device,
+            [e.target.name] : false,
+        })
+    }
+
+
 
     return(
         <div className={styles.PreviewPage}>
@@ -67,11 +84,11 @@ export default function Preview(){
                     </div>
             <div className={styles.OptionsDashboard}>
                 <div className={styles.Device}>
-                     <button className={styles.Left}><DesktopOutlined /></button>
-                     <button className={styles.Right}><MobileOutlined /></button>
+                     <button className={styles.Left} name="desktop"  autoFocus="true" onFocus={handleFocusDevice} onBlur={handleBlurDevice}><DesktopOutlined /></button>
+                     <button className={styles.Right} name="mobile"  onFocus={handleFocusDevice} onBlur={handleBlurDevice} ><MobileOutlined /></button>
                 </div>
                 <button className={styles.Language}> <label>Customer location  <Popover content="Checkout adapts to your costumer's location and preferences to show the language and payment methods most likely to increase conversion." className={styles.Popover}><InfoCircleFilled/></Popover> | </label>
-                <select type="select"  onChange={handleChange} defaultValue="United States">
+                <select type="select" defaultValue="United States">
                     <option value="Argentina">Argentina</option>
                     <option value="United States">United States</option>
                 </select>
@@ -81,10 +98,17 @@ export default function Preview(){
            
         </div>
     
-    <div className={styles.App}>
-    <iframe src={`http://localhost:3001/preview${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === "true"? "&coupons=true": ""}${options.shipping === "true"? "&shipping=true": ""}`}
+    <div className={device.mobile === true ? styles.MobileApp : styles.App}>
+    <iframe src={`http://localhost:3001/preview${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === "true"? "&coupons=true": ""}${options.shipping === "true"? "&shipping=true": ""}${device.desktop === true? "&desktop=true": ""}${device.mobile === true? "&mobile=true": ""}`}
              title="Configure-Checkout" width="100%" height="100%" scrolling={options.shipping === "true" ? "yes" : "no"}/> 
         </div>
     </div>
+
+
+
+
+    
     )
 }
+
+//${device.desktop === "true"? "&desktop=true": ""}${device.mobile === "true"? "&mobile=true": ""}
