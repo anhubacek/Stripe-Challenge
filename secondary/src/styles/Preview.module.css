@@ -1238,6 +1238,21 @@
         border: solid 0.5px rgb(201, 200, 200);
          padding: 7px 10px;
         }
+
+        
+    .ConfigureCheckout .Content .Checkout .Right .Content .TemplateThree .ErrorInput{
+        width: 100%;
+        height: 35px;
+        border-radius: 5px;
+        margin: 4px 0px;
+        border: solid 0.5px rgb(189, 4, 4);
+        padding: 7px 10px;
+        color:rgb(189, 4, 4);
+        }
+
+        .ConfigureCheckout .Content .Checkout .Right .Content .TemplateThree .ErrorInput:focus{
+            outline: none; 
+        }
     .ConfigureCheckout .Content .Checkout .Right .Content .TemplateThree .Bottom:focus{
      outline: solid 3px var(--borderLight);
     }
@@ -1569,7 +1584,12 @@
     }
 
 
-
+    .ConfigureCheckout .Content .Errors{
+        color: rgb(211, 9, 9);
+        font-size: 14px;
+        font-weight: 500;
+        
+    }
 
 
 
