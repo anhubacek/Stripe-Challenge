@@ -46,18 +46,30 @@ export default function Preview(){
     }
 
     function handleFocusDevice(e){
+           e.preventDefault();
         setDevice({
             ...device,
             [e.target.name] : true,
         })
     }
     function handleBlurDevice(e){
+           e.preventDefault();
         setDevice({
             ...device,
             [e.target.name] : false,
         })
     }
 
+    const [language, setLanguage] = useState("en")
+
+    function handleLanguage (e){
+        e.preventDefault();
+        setLanguage([e.target.value])
+    }
+
+   console.log(language, "language")
+
+   let iframeSource= `http://localhost:3001/preview${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === "true"? "&coupons=true": ""}${options.shipping === "true"? "&shipping=true": ""}${device.desktop === true? "&desktop=true": ""}${device.mobile === true? "&mobile=true": ""}${language[0] === "en"? "&lan=en": ""}${language[0] === "es"? "&lan=es": ""}`
 
 
     return(
@@ -88,9 +100,9 @@ export default function Preview(){
                      <button className={styles.Right} name="mobile"  onFocus={handleFocusDevice} onBlur={handleBlurDevice} ><MobileOutlined /></button>
                 </div>
                 <button className={styles.Language}> <label>Customer location  <Popover content="Checkout adapts to your costumer's location and preferences to show the language and payment methods most likely to increase conversion." className={styles.Popover}><InfoCircleFilled/></Popover> | </label>
-                <select type="select" defaultValue="United States">
-                    <option value="Argentina">Argentina</option>
-                    <option value="United States">United States</option>
+                <select onChange={handleLanguage} type="select" defaultValue="United States">
+                    <option value="es">Argentina</option>
+                    <option value="en">United States</option>
                 </select>
                 </button>
             </div>
@@ -99,7 +111,7 @@ export default function Preview(){
         </div>
     
     <div className={device.mobile === true ? styles.MobileApp : styles.App}>
-    <iframe src={`http://localhost:3001/preview${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === "true"? "&coupons=true": ""}${options.shipping === "true"? "&shipping=true": ""}${device.desktop === true? "&desktop=true": ""}${device.mobile === true? "&mobile=true": ""}`}
+    <iframe src={iframeSource}
              title="Configure-Checkout" width="100%" height="100%" scrolling={options.shipping === "true" ? "yes" : "no"}/> 
         </div>
     </div>
