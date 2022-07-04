@@ -25,7 +25,7 @@ export function useOptionsUpdateShippingContext(){
 export function Options({children}){
 
     const [options, setOptions] = useState({
-        color: "Light",
+        color: "light",
         coupons: false,
         shipping: false,
 
