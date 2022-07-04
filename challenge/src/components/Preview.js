@@ -26,7 +26,6 @@ export default function Preview(){
 
    useEffect(() => {
     const currentParams = Object.fromEntries([...searchParams]);
-    console.log(currentParams, "CurrentParams preview principal "); 
     setOptions({
         color: currentParams.color,
         coupons: currentParams.coupons,
@@ -67,7 +66,6 @@ export default function Preview(){
         setLanguage([e.target.value])
     }
 
-   console.log(language, "language")
 
    let iframeSource= `http://localhost:3001/preview${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === "true"? "&coupons=true": ""}${options.shipping === "true"? "&shipping=true": ""}${device.desktop === true? "&desktop=true": ""}${device.mobile === true? "&mobile=true": ""}${language[0] === "en"? "&lan=en": ""}${language[0] === "es"? "&lan=es": ""}`
 
@@ -96,7 +94,7 @@ export default function Preview(){
                     </div>
             <div className={styles.OptionsDashboard}>
                 <div className={styles.Device}>
-                     <button className={styles.Left} name="desktop"  autoFocus="true" onFocus={handleFocusDevice} onBlur={handleBlurDevice}><DesktopOutlined /></button>
+                     <button className={styles.Left} name="desktop"  autoFocus={true} onFocus={handleFocusDevice} onBlur={handleBlurDevice}><DesktopOutlined /></button>
                      <button className={styles.Right} name="mobile"  onFocus={handleFocusDevice} onBlur={handleBlurDevice} ><MobileOutlined /></button>
                 </div>
                 <button className={styles.Language}> <label>Customer location  <Popover content="Checkout adapts to your costumer's location and preferences to show the language and payment methods most likely to increase conversion." className={styles.Popover}><InfoCircleFilled/></Popover> | </label>
@@ -112,7 +110,7 @@ export default function Preview(){
     
     <div className={device.mobile === true ? styles.MobileApp : styles.App}>
     <iframe src={iframeSource}
-             title="Configure-Checkout" width="100%" height="100%" scrolling={options.shipping === "true" ? "yes" : "no"}/> 
+             title="Configure-Checkout" width="100%" height="100%" scrolling="yes"/> 
         </div>
     </div>
 
