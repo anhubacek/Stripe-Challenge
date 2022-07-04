@@ -98,7 +98,7 @@ export default function Preview(){
                      <button className={styles.Right} name="mobile"  onFocus={handleFocusDevice} onBlur={handleBlurDevice} ><MobileOutlined /></button>
                 </div>
                 <button className={styles.Language}> <label>Customer location  <Popover content="Checkout adapts to your costumer's location and preferences to show the language and payment methods most likely to increase conversion." className={styles.Popover}><InfoCircleFilled/></Popover> | </label>
-                <select onChange={handleLanguage} type="select" defaultValue="United States">
+                <select onChange={handleLanguage} type="select" defaultValue="en">
                     <option value="es">Argentina</option>
                     <option value="en">United States</option>
                 </select>
