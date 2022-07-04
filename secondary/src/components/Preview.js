@@ -22,8 +22,8 @@ export default function Preview (){
         email: "",
     })
 
-    const [errors, setErrors] = useState({})
-    useEffect(() => console.log(options, "Preview Iframe Options"))
+    const[language, setLanguage] =useState("en")
+
     useEffect(() => {
         const currentParams = Object.fromEntries([...searchParams]);
       console.log(currentParams, "ESTO ES CURRENT PARAMS"); 
@@ -36,17 +36,17 @@ export default function Preview (){
             desktop: currentParams.desktop,
             mobile: currentParams.cel
         })
+        setLanguage(currentParams.lan)
        
      }, [searchParams]);
 
-     
      function handleChange(e){
         e.preventDefault();
         setInput({
             ...input,
             [e.target.name] : e.target.value
         })
-        console.log(input)
+
      }
     return(
         <div className={styles.ConfigureCheckout}>
