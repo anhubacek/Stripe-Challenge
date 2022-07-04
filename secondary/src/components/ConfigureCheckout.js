@@ -8,7 +8,7 @@ import {TrademarkCircleFilled, ArrowLeftOutlined, DownOutlined,
 export default function ConfigureCheckout (){
     const [searchParams, setSearchParams] = useSearchParams();
     const [options, setOptions] = useState({
-        color: "Light",
+        color: "light",
         coupons: false,
         shipping:false,
 
@@ -40,7 +40,7 @@ export default function ConfigureCheckout (){
                     </div>
                 </div>
                 <div className={styles.Checkout}>
-                    <div className={options.color === "Light" ? styles.LightLeft : styles.DarkLeft}>
+                    <div className={options.color === "light" ? styles.LightLeft : styles.DarkLeft}>
                         <div className={styles.Logo}>
                         <ArrowLeftOutlined className={styles.LeftArrow}/>
                         <TrademarkCircleFilled />

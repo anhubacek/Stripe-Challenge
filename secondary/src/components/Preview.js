@@ -8,7 +8,7 @@ import {TrademarkCircleFilled, ArrowLeftOutlined, DownOutlined,
 export default function Preview (){
     const [searchParams, setSearchParams] = useSearchParams();
     const [options, setOptions] = useState({
-        color: "Light",
+        color: "light",
         coupons: false,
         shipping:false,
 
@@ -26,7 +26,7 @@ export default function Preview (){
 
     useEffect(() => {
         const currentParams = Object.fromEntries([...searchParams]);
-      console.log(currentParams, "ESTO ES CURRENT PARAMS"); 
+    //   console.log(currentParams, "ESTO ES CURRENT PARAMS"); 
         setOptions({
             color: currentParams.color,
             coupons: currentParams.coupons,
@@ -62,13 +62,15 @@ export default function Preview (){
                     </div>
                 </div>
                 <div className={styles.ResponsiveHeader}>
+                    <div className={options.color === "light" ? styles.ResponsiveLightHeader : styles.ResponsiveDarkHeader} >
                         <ArrowLeftOutlined className={styles.LeftArrow}/>
                         <div className={styles.BrandIcon}>R</div>
                         <span>Rebill</span>
                         <p>TEST MODE</p>
                         </div>
+                        </div>
                 <div className={styles.Checkout}>
-                    <div className={options.color === "Light" ? styles.LightLeft : styles.DarkLeft}>
+                    <div className={options.color === "light" ? styles.LightLeft : styles.DarkLeft}>
                     <div className={styles.ResponsiveLeft}>
                     <div className={styles.BigItems} >
                             <div className={styles.ImgItems} >
