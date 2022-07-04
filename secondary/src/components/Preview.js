@@ -2,10 +2,12 @@ import {React, useEffect, useState, useContext}  from 'react'
 import { useParams, useSearchParams } from 'react-router-dom'
 import styles from '../styles/Preview.module.css'
 import {TrademarkCircleFilled, ArrowLeftOutlined, DownOutlined,
-    CheckOutlined, LockFilled} from '@ant-design/icons'
+    CheckOutlined, LockFilled} from '@ant-design/icons';
+import { useTranslation } from 'react-i18next';
 
 
 export default function Preview (){
+    const [t, i18n] = useTranslation("global")
     const [searchParams, setSearchParams] = useSearchParams();
     const [options, setOptions] = useState({
         color: "light",
@@ -22,11 +24,13 @@ export default function Preview (){
         email: "",
     })
 
-    const[language, setLanguage] =useState("en")
-
+    const[language, setLanguage] =useState("en");
+    console.log(language)
+    // useEffect(() => i18n.changeLanguage(language), [searchParams, language])
+    useEffect(() => {changeLanguage()}, [language])
     useEffect(() => {
         const currentParams = Object.fromEntries([...searchParams]);
-    //   console.log(currentParams, "ESTO ES CURRENT PARAMS"); 
+      console.log(currentParams, "CURRENT PARAMS"); 
         setOptions({
             color: currentParams.color,
             coupons: currentParams.coupons,
@@ -37,6 +41,7 @@ export default function Preview (){
             mobile: currentParams.cel
         })
         setLanguage(currentParams.lan)
+        
        
      }, [searchParams]);
 
@@ -47,6 +52,10 @@ export default function Preview (){
             [e.target.name] : e.target.value
         })
 
+     }
+
+     function changeLanguage(){
+        i18n.changeLanguage(language)
      }
     return(
         <div className={styles.ConfigureCheckout}>
@@ -140,7 +149,7 @@ export default function Preview (){
                             <div className={styles.TemplateOne}>Pay</div>
                             <div className={styles.TemplateTwo}>
                                 <div className={styles.Line}></div>
-                                <div className={styles.Middle}>Or pay with card</div>
+                                <div className={styles.Middle}>{t( "right.or-pay-with-card")}</div>
                                 <div className={styles.Line}></div>
                             </div>
                             <div className={options.shipping === "true" ? styles.TemplateMiddle : styles.TemplateMiddleHidden}>
