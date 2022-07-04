@@ -58,8 +58,8 @@ export default function Configure(){
                         <div className={styles.InfoIcon}><Popover placement="top"  content="Customize Checkout's colors to match your brand." > <InfoCircleFilled /></Popover></div>
                     </div>
                     <div className={styles.ColorOptions}>
-                        <button className={styles.White} onFocus={updateColor} name="color" value="Light"/>
-                        <button  className={styles.Blue} onFocus={updateColor} name="color" value="Dark"/>
+                        <button className={styles.White} onFocus={updateColor} name="color" value="light"/>
+                        <button  className={styles.Blue} onFocus={updateColor} name="color" value="dark"/>
                     </div>
                 
                 </div>
@@ -106,10 +106,10 @@ export default function Configure(){
             </div>
            
             </div>
-            <a href={`/preview${options.color === "Dark" ? "?color=Dark" : "?color=Light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`} className={styles.NextStep}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
+            <a href={`/preview${options.color === "dark" ? "?color=dark" : "?color=light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`} className={styles.NextStep}><span>Next</span><RightOutlined className={styles.NextIcon}/></a>
         </div>
     <div className={styles.App}>
-             <iframe src={`http://localhost:3001/configurecheckout${options.color === "Dark" ? "?color=Dark" : "?color=Light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`}
+             <iframe src={`http://localhost:3001/configurecheckout${options.color === "dark" ? "?color=dark" : "?color=light"}${options.coupons === true? "&coupons=true": ""}${options.shipping === true? "&shipping=true": ""}`}
              title="Configure-Checkout" width="100%" height="100%" scrolling='no'/> 
         </div>
     </div>

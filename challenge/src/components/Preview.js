@@ -13,7 +13,7 @@ export default function Preview(){
    
     const [searchParams, setSearchParams] = useSearchParams();
     const [options, setOptions] = useState({
-        color: "Light",
+        color: "light",
         coupons: false,
         shipping:false,
 
@@ -67,7 +67,7 @@ export default function Preview(){
     }
 
 
-   let iframeSource= `http://localhost:3001/preview${options.color === "Dark" ? "?color=dark" : "?color=Light"}${options.coupons === "true"? "&coupons=true": ""}${options.shipping === "true"? "&shipping=true": ""}${device.desktop === true? "&desktop=true": ""}${device.mobile === true? "&mobile=true": ""}${language[0] === "en"? "&lan=en": ""}${language[0] === "es"? "&lan=es": ""}`
+   let iframeSource= `http://localhost:3001/preview${options.color === "dark" ? "?color=dark" : "?color=light"}${options.coupons === "true"? "&coupons=true": ""}${options.shipping === "true"? "&shipping=true": ""}${device.desktop === true? "&desktop=true": ""}${device.mobile === true? "&mobile=true": ""}${language[0] === "en"? "&lan=en": ""}${language[0] === "es"? "&lan=es": ""}`
 
 
     return(
