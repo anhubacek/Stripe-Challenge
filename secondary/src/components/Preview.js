@@ -95,50 +95,50 @@ export default function Preview (){
                         </div>
                        
                         <div className={styles.Price}>
-                            <div className={styles.GrayTemplate}>Pay Rebill</div>
-                            <span>$129,00</span>
+                            <div className={styles.GrayTemplate}>{t("left.Pay-Rebill")}</div>
+                            <span>{t("left.$129")}</span>
                         </div>
                         <div className={styles.Detail}>
                             <div className={styles.DetailTemplate}>
                                 <div className={styles.Image}></div>
                                 <div className={styles.Middle}>
                                     <div className={styles.GrayTemplateTop}>The Pure Set</div>
-                                    <div className={styles.GrayTemplateBottom}>Qty</div>
+                                    <div className={styles.GrayTemplateBottom}>{t("left.Qty")}</div>
                                 </div>
-                                <div className={styles.RightTemplate}>$65,00</div>
+                                <div className={styles.RightTemplate}>{t("left.$65")}</div>
                             </div>
                             <div className={styles.DetailTemplate}>
                                 <div className={styles.Image}></div>
                                 <div className={styles.Middle}>
                                     <div className={styles.GrayTemplateTop}>Pure glow cream</div>
-                                    <div className={styles.GrayTemplateBottom}>Qty</div>
+                                    <div className={styles.GrayTemplateBottom}>{t("left.Qty")}</div>
                                 </div>
-                                <div className={styles.RightTemplate}>$64,00</div>
+                                <div className={styles.RightTemplate}>{t("left.$64")}</div>
                             </div>
                         </div>
                         <div className={options.coupons === "true"|| options.shipping === "true"? styles.CouponsTop : styles.CouponsTopHidden}>
                             <div className={styles.GrayTemplate}>Subtotal</div>
-                            <div className={styles.GrayTemplate}>$129,00</div>
+                            <div className={styles.GrayTemplate}>{t("left.$129")}</div>
                         </div>
                         <div className={options.coupons === "true" ? styles.CouponsButton : styles.CouponsButtonHidden}>
-                            <span>Add promotion code</span>
+                            <span>{t("left.Add-promotion-code")}</span>
                         </div>
                         <div className={options.shipping === "true"? styles.Shipping : styles.ShippingHidden}>
                             <div className={styles.ShippingDetails}>
-                                <span>Shipping</span>
-                                <p>Free Shipping (5-7 business days)</p>
+                                <span>{t("left.Shipping")}</span>
+                                <p>{t("left.Free-Shipping-(5-7-business-days)")}</p>
                             </div>
-                                <span>Free</span>
+                                <span>{t("left.Free")}</span>
                         </div>
                         <div className={options.coupons === "true"|| options.shipping === "true"? styles.CouponsBottom : styles.CouponsBottomHidden}>
-                            <div className={styles.GrayTemplate}>Total due</div>
-                            <div className={styles.GrayTemplate}>$129,00</div>
+                            <div className={styles.GrayTemplate}>{t("left.Total-due")}</div>
+                            <div className={styles.GrayTemplate}>{t("left.$129")}</div>
                         </div>
                         <div className={styles.Footer}>
                             <span>Powered by</span>
                             <span className={styles.Stripe}>stripe</span>
                             <span>|</span>
-                            <span>Terms privacy</span>
+                            <span>{t("left.Terms-privacy")}</span>
                         </div>
 
 
@@ -153,10 +153,10 @@ export default function Preview (){
                                 <div className={styles.Line}></div>
                             </div>
                             <div className={options.shipping === "true" ? styles.TemplateMiddle : styles.TemplateMiddleHidden}>
-                                Shipping information
+                                { t("right.Shipping-information")}
                             </div>
                             <div className={styles.TemplateThree}>
-                            <div className={styles.Top}>Email</div>
+                            <div className={styles.Top}> { t("right.Email")} </div>
                             <input type="text" 
                             name="email" 
                             autoComplete='off' 
@@ -164,42 +164,42 @@ export default function Preview (){
                             onChange={handleChange}
                             className={!input.email || !input.email.match(
                             /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i )? styles.ErrorInput : styles.Bottom}/>
-                            { !input.email ? <p className={styles.Errors}>Please complete your email.</p> : null}
+                            { !input.email ? <p className={styles.Errors}>{t("right.Please-complete-your-email")}</p> : null}
                             { input.email && !input.email.match(
-                            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i ) ? <p className={styles.Errors}>Please enter a valid email.</p> : null}
+                            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i ) ? <p className={styles.Errors}>{t("right.Please-enter-a-valid-email")}</p> : null}
                             </div>
                             <div className={options.shipping === "true" ? styles.Shipping : styles.ShippingHidden}>
-                            <label className={styles.AddressLabel}>Shipping Adress</label>
-                                <input type="text" className={styles.Name} placeholder="Name"/>
+                            <label className={styles.AddressLabel}>{t("right.Shipping-Adress")}</label>
+                                <input type="text" className={styles.Name} placeholder={t("right.Name")}/>
                                 <select className={styles.Country}type="select"  defaultValue="United States" >
                                     <option value="Argentina">Argentina</option>
-                                    <option value="United States">United States</option>
+                                    <option value="United States">{t("right.United-States")}</option>
                                  </select>
-                                <input type="text" className={styles.AddressInput} placeholder="Address"/>
-                                <label className={styles.EnterAddressLabel}>Enter adress manually</label>
-                                <label className={styles.MethodLabel}>Shipping Method</label>
+                                <input type="text" className={styles.AddressInput} placeholder={t("right.Address")}/>
+                                <label className={styles.EnterAddressLabel}>{t("right.Enter-address-manually")}</label>
+                                <label className={styles.MethodLabel}>{t("right.Shipping-Method")}</label>
                                 <div className={styles.Free}>
                                     <input type="radio" className={styles.Left}/>
                                     <div className={styles.Middle}>
-                                        <span>Free Shipping</span>
-                                        <p>5-7 business days</p>
+                                        <span>{t("right.Free-Shipping")}</span>
+                                        <p>{t("right.5-7-business-days")}</p>
                                     </div>
-                                    <div className={styles.RightShipping}>Free</div>
+                                    <div className={styles.RightShipping}>{t("right.Free")}</div>
                                 </div>
                                 <div className={styles.Next}>
                                 <input type="radio"className={styles.Left}/>
                                     <div className={styles.Middle}>
-                                    <span>Next day air</span>
-                                        <p>1 business days</p>
+                                    <span>{t("right.Next-day-air")}</span>
+                                        <p>{t("right.1-business-days")}</p>
                                     </div>
                                     <div className={styles.RightShipping}>$15,00</div>
                                 </div>
                             </div>
                             <div className={options.shipping === "true" ? styles.PaymentDetails : styles.PaymentDetailsHidden}>
-                                Payment details
+                               {t("right.Payment-details")}
                             </div>
                             <div className={styles.TemplateFour}>
-                            <div className={styles.Top}>Card information</div>
+                            <div className={styles.Top}>{t("right.Card-information")}</div>
                             <input type="text" className={styles.Bottom}/>
                             <div className={styles.Other}>
                             <input type="text" className={styles.Data1}/>
@@ -207,22 +207,22 @@ export default function Preview (){
                             </div>
                             </div>
                             <div className={options.shipping === "true" ? styles.TemplateFiveHidden : styles.TemplateFive}>
-                            <div className={styles.Top}>Name on card</div>
+                            <div className={styles.Top}>{t("right.Name-on-card")}</div>
                             <input type="text" className={styles.Bottom}/>
                             </div>
                             <div className={options.shipping === "true" ? styles.TemplateSixHidden :styles.TemplateSix}>
-                            <div className={styles.Top}>Country or region</div>
+                            <div className={styles.Top}>{t("right.Country-or-region")}</div>
                             <select className={styles.Country}type="select"  defaultValue="United States" >
                                     <option value="Argentina">Argentina</option>
-                                    <option value="United States">United States</option>
+                                    <option value="United States">{t("right.United-States")}</option>
                                  </select>
-                            <input type="text" placeholder="ZIP" className={styles.Bottom}/>
+                            <input type="text" placeholder={t("right.ZIP")} className={styles.Bottom}/>
                             </div>
                             <div className={options.shipping === "true" ? styles.Checked : styles.CheckedHidden}>
                             <input type="checkbox"/>
-                            <span>Billing address is same as shipping</span>
+                            <span>{t("right.Billing-address-is-same-as-shipping")}</span>
                             </div>
-                            <button className={styles.PayButton}>Pay</button>
+                            <button className={styles.PayButton}>{t("right.Pay")}</button>
                         </div>
                         
                     </div>
@@ -232,7 +232,7 @@ export default function Preview (){
                             <span className={styles.Stripe}>stripe</span>
                             </div>
                             <div className={styles.BottomResponsiveFooter}>    
-                            <span>Terms privacy</span>
+                            <span>{t("left.Terms-privacy")}</span>
                             </div>
                         </div>
                 </div>

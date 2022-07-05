@@ -1,6 +1,42 @@
 {
     "right":{
         "pay": "Pagar",
-        "or-pay-with-card": "o pagar con tarjeta"
+        "or-pay-with-card": "o pagar con tarjeta",
+        "Shipping-information": "Información de envío",
+        "Email": "Correo electrónico",
+        "Please-complete-your-email": "Por favor complete su correo electrónico.",
+        "Please-enter-a-valid-email": "Ingrese un correo electrónico válido.",
+        "Shipping-Adress": "Dirección de envío",
+        "Name": "Nombre",
+        "Address": "Dirección",
+        "Enter-address-manually": "Ingresar dirección manualmente",
+        "Shipping-Method": "Método de envío",
+        "United-States": "Estados Unidos",
+        "Free-Shipping": "Envío gratis",
+        "5-7-business-days" : "5-7 días hábiles",
+        "Free": "Gratuito",
+        "Next-day-air": "Envío rápido",
+        "1-business-days": "1 día hábil como máximo",
+        "Payment-details": "Datos del pago",
+        "Card-information": "Información de la tarjeta",
+        "Name-on-card": "Nombre en la tarjeta",
+        "Country-or-region": "País o región",
+        "Billing-address-is-same-as-shipping": "La dirección de facturación es la misma que la de envío",
+        "Pay": "Pagar",
+        "ZIP": "CP"
+    },
+    "left": {
+        "Pay-Rebill": "Pagar a Rebill",
+        "Qty": "Cant.",
+        "Add-promotion-code": "Agregar código de promoción",
+        "Shipping": "Envío",
+        "Free-Shipping-(5-7-business-days)": "Envío gratis (5-7 días hábiles)",
+        "Total-due": "Total adeudado",
+        "Terms-privacy": "Condiciones Privacidad",
+        "$129": "ARS $16.770",
+        "$65": "ARS $8.450",
+        "$64": "ARS $8.320",
+        "Free": "Gratuito"
     }
+    
 }
