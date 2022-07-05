@@ -295,25 +295,123 @@
     margin-bottom: 0px;
     
 }
-.ConfigureCheckout .Content .Checkout .LightLeft .ShippingHidden{
+.ConfigureCheckout .Content .Checkout .LightLeft .FreeShippingHidden{
     display:none;
 }
-.ConfigureCheckout .Content .Checkout .DarkLeft .ShippingHidden{
+.ConfigureCheckout .Content .Checkout .DarkLeft .FreeShippingHidden{
     display:none;
 }
-.ConfigureCheckout .Content .Checkout .LightLeft .Shipping .ShippingDetails{
+.ConfigureCheckout .Content .Checkout .LightLeft .NextShippingHidden{
+    display:none;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .NextShippingHidden{
+    display:none;
+}
+.ConfigureCheckout .Content .Checkout .LightLeft .FreeShipping{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    color: grey;
+    margin-left: 55px;
+    }
+
+.ConfigureCheckout .Content .Checkout .LightLeft .NextShipping{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    color: grey;
+    margin-left: 55px;
+    }
+.ConfigureCheckout .Content .Checkout .LightLeft .FreeShipping .ShippingDetails{
     display: flex;
     flex-direction: column;
     font-size: 14px;
+    color: grey;
+    width: 270px;
 }
-.ConfigureCheckout .Content .Checkout .LightLeft .Shipping .ShippingDetails span{
+
+
+.ConfigureCheckout .Content .Checkout .LightLeft .FreeShipping .ShippingDetails span{
     margin: 0px;
     font-size: 14px;
+    color: grey;
 }
-.ConfigureCheckout .Content .Checkout .LightLeft .Shipping .ShippingDetails p{
+.ConfigureCheckout .Content .Checkout .LightLeft .FreeShipping .ShippingDetails p{
     margin: 0px;
     font-size: 12px;
+    color: grey;
 }
+.ConfigureCheckout .Content .Checkout .LightLeft .NextShipping .ShippingDetails{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: grey;
+    width: 240px;
+}
+.ConfigureCheckout .Content .Checkout .LightLeft .NextShipping .ShippingDetails span{
+    margin: 0px;
+    font-size: 14px;
+      color: grey;
+}
+.ConfigureCheckout .Content .Checkout .LightLeft .NextShipping .ShippingDetails p{
+    margin: 0px;
+    font-size: 12px;
+    color: grey;
+}
+
+
+.ConfigureCheckout .Content .Checkout .DarkLeft .FreeShipping{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    color: rgb(173, 170, 170);
+    margin-left: 55px;
+    }
+
+.ConfigureCheckout .Content .Checkout .DarkLeft .NextShipping{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    color: rgb(173, 170, 170);
+    margin-left: 55px;
+    }
+.ConfigureCheckout .Content .Checkout .DarkLeft .FreeShipping .ShippingDetails{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: rgb(173, 170, 170);
+    width: 270px;
+}
+
+
+.ConfigureCheckout .Content .Checkout .DarkLeft .FreeShipping .ShippingDetails span{
+    margin: 0px;
+    font-size: 14px;
+    color: rgb(173, 170, 170);
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .FreeShipping .ShippingDetails p{
+    margin: 0px;
+    font-size: 12px;
+    color: rgb(173, 170, 170);
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .NextShipping .ShippingDetails{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: rgb(173, 170, 170);
+    width: 240px;
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .NextShipping .ShippingDetails span{
+    margin: 0px;
+    font-size: 14px;
+      color: rgb(173, 170, 170);
+}
+.ConfigureCheckout .Content .Checkout .DarkLeft .NextShipping .ShippingDetails p{
+    margin: 0px;
+    font-size: 12px;
+    color: rgb(173, 170, 170);
+}
+
 
 .ConfigureCheckout .Content .Checkout .LightLeft .Footer{
     display: flex;
@@ -1007,7 +1105,7 @@
     width: fit-content;
     font-size: 13px;
     color: black;
-    margin-left: 135px;
+    margin-left: 150px;
     align-self: center;
 }
 
@@ -1554,7 +1652,7 @@
     .ConfigureCheckout .Content .Checkout .Right .Content .Shipping .Free{
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         width: 100%;
         height: 50px;
         font-size: 14px;
@@ -1574,7 +1672,7 @@
         margin-top: 4px;
     }
     .ConfigureCheckout .Content .Checkout .Right .Content .Shipping .Free .Middle{
-        width: 70%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         font-size: 14px;
@@ -1593,17 +1691,17 @@
     }
     .ConfigureCheckout .Content .Checkout .Right .Content .Shipping .Free .RightShipping{
         box-shadow: none;
-        width: 20%;
+        width: fit-content;
         font-size: 13px;
         color: black;
-        margin-left: 90px;
+        margin-left: 70px;
         align-self: center;
     }
     .ConfigureCheckout .Content .Checkout .Right .Content .Shipping .Next{
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        width: 98%;
+        justify-content: space-evenly;
+        width: 100%;
         font-size: 12px;
         color: rgb(121, 120, 120);
         box-shadow: none;
@@ -1641,7 +1739,7 @@
         width: fit-content;
         font-size: 13px;
         color: black;
-        margin-left: 80px;
+        margin-left: 90px;
         align-self: center;
     }
     
@@ -1907,5 +2005,29 @@
         font-weight: 500;
         margin-left: 5px;
         color:rgb(165, 164, 163)
+    }
+    .ConfigureCheckout .Content .Checkout .LightLeft .FreeShippingHidden{
+        display:none;
+    }
+    .ConfigureCheckout .Content .Checkout .DarkLeft .FreeShippingHidden{
+        display:none;
+    }
+    .ConfigureCheckout .Content .Checkout .LightLeft .NextShippingHidden{
+        display:none;
+    }
+    .ConfigureCheckout .Content .Checkout .DarkLeft .NextShippingHidden{
+        display:none;
+    }
+    .ConfigureCheckout .Content .Checkout .LightLeft .FreeShipping{
+        display:none;
+    }
+    .ConfigureCheckout .Content .Checkout .DarkLeft .FreeShipping{
+        display:none;
+    }
+    .ConfigureCheckout .Content .Checkout .LightLeft .NextShipping{
+        display:none;
+    }
+    .ConfigureCheckout .Content .Checkout .DarkLeft .NextShipping{
+        display:none;
     }
 }

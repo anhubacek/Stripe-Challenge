@@ -36,6 +36,9 @@
         "$129": "USD $129,00",
         "$65": "USD $65,00",
         "$64": "USD $64,00",
-        "Free": "Free"
+        "Free": "Free",
+        "Next-day-air": "Next day air (At most 1 business day)",
+        "$15": "USD $15,00"
     }
+    
 }
