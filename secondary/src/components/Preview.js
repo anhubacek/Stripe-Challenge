@@ -23,11 +23,15 @@ export default function Preview (){
 
     const [input, setInput] = useState({
         email: "",
+        shippingMethod: "free"
     })
-
+    console.log(input)
     const[language, setLanguage] =useState("en");
-    console.log(language)
-    // useEffect(() => i18n.changeLanguage(language), [searchParams, language])
+    
+    const[shippingMethod, setShippingMethod] = useState({
+        free: true,
+        next: false
+    })
     useEffect(() => {changeLanguage()}, [language])
     useEffect(() => {
         const currentParams = Object.fromEntries([...searchParams]);
@@ -47,7 +51,6 @@ export default function Preview (){
      }, [searchParams]);
 
      function handleChange(e){
-        e.preventDefault();
         setInput({
             ...input,
             [e.target.name] : e.target.value
@@ -140,12 +143,19 @@ export default function Preview (){
                         <div className={options.coupons === "true" ? styles.CouponsButton : styles.CouponsButtonHidden}>
                             <span>{t("left.Add-promotion-code")}</span>
                         </div>
-                        <div className={options.shipping === "true"? styles.Shipping : styles.ShippingHidden}>
+                        <div className={options.shipping === "true" && input.shippingMethod === "free" ? styles.FreeShipping : styles.FreeShippingHidden}>
                             <div className={styles.ShippingDetails}>
                                 <span>{t("left.Shipping")}</span>
                                 <p>{t("left.Free-Shipping-(5-7-business-days)")}</p>
                             </div>
                                 <span>{t("left.Free")}</span>
+                        </div>
+                        <div className={options.shipping === "true" && input.shippingMethod === "next" ? styles.NextShipping : styles.NextShippingHidden}>
+                            <div className={styles.ShippingDetails}>
+                                <span>{t("left.Shipping")}</span>
+                                <p>{t("left.Next-day-air")}</p>
+                            </div>
+                                <span>{t("left.$15")}</span>
                         </div>
                         <div className={options.coupons === "true"|| options.shipping === "true"? styles.CouponsBottom : styles.CouponsBottomHidden}>
                             <div className={styles.GrayTemplate}>{t("left.Total-due")}</div>
@@ -196,7 +206,9 @@ export default function Preview (){
                                 <label className={styles.EnterAddressLabel}>{t("right.Enter-address-manually")}</label>
                                 <label className={styles.MethodLabel}>{t("right.Shipping-Method")}</label>
                                 <div className={styles.Free}>
-                                    <input type="radio" className={styles.Left}/>
+                                    <input type="radio" className={styles.Left} value="free"  
+                                    onFocus={handleChange} name="shippingMethod"
+                                    />
                                     <div className={styles.Middle}>
                                         <span>{t("right.Free-Shipping")}</span>
                                         <p>{t("right.5-7-business-days")}</p>
@@ -204,12 +216,14 @@ export default function Preview (){
                                     <div className={styles.RightShipping}>{t("right.Free")}</div>
                                 </div>
                                 <div className={styles.Next}>
-                                <input type="radio"className={styles.Left}/>
+                                <input type="radio"className={styles.Left} value="next" name="shippingMethod" 
+                                        onFocus={handleChange}
+                                    />
                                     <div className={styles.Middle}>
                                     <span>{t("right.Next-day-air")}</span>
                                         <p>{t("right.1-business-days")}</p>
                                     </div>
-                                    <div className={styles.RightShipping}>$15,00</div>
+                                    <div className={styles.RightShipping}>{t("left.$15")}</div>
                                 </div>
                             </div>
                             <div className={options.shipping === "true" ? styles.PaymentDetails : styles.PaymentDetailsHidden}>

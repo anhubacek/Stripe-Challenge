@@ -16,7 +16,7 @@
         "5-7-business-days" : "5-7 días hábiles",
         "Free": "Gratuito",
         "Next-day-air": "Envío rápido",
-        "1-business-days": "1 día hábil como máximo",
+        "1-business-days": "1 día hábil máximo",
         "Payment-details": "Datos del pago",
         "Card-information": "Información de la tarjeta",
         "Name-on-card": "Nombre en la tarjeta",
@@ -36,7 +36,8 @@
         "$129": "ARS $16.770",
         "$65": "ARS $8.450",
         "$64": "ARS $8.320",
-        "Free": "Gratuito"
+        "Free": "Gratuito",
+        "Next-day-air": "Envío rápido (1 día hábil como máximo)",
+        "$15": "ARS $1.950"
     }
-    
 }
