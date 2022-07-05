@@ -38,6 +38,7 @@
         "$64": "ARS $8.320",
         "Free": "Gratuito",
         "Next-day-air": "Envío rápido (1 día hábil como máximo)",
-        "$15": "ARS $1.950"
+        "$15": "ARS $1.950",
+        "$total+shipping": "ARS $18.720"
     }
 }
