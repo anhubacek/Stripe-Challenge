@@ -214,7 +214,7 @@
     color: black;
     font-size: 14px;
     font-weight: 500;
-    margin-left: 80px;
+    margin-left: 45px;
     
 }
 .ConfigureCheckout .Content .Checkout .LightLeft .CouponsTop{
@@ -318,7 +318,7 @@
 .ConfigureCheckout .Content .Checkout .LightLeft .Footer{
     display: flex;
     flex-direction: row;
-    width: 210px;
+    width: 300px;
     color: var(--placeholder);
     font-size: 12px;
     align-items: center;
@@ -452,7 +452,7 @@
     color: white;
     font-size: 14px;
     font-weight: 500;
-    margin-left: 80px;
+    margin-left: 45px;
     
 }
 .ConfigureCheckout .Content .Checkout .DarkLeft .CouponsTop{
@@ -561,7 +561,7 @@
 .ConfigureCheckout .Content .Checkout .DarkLeft .Footer{
     display: flex;
     flex-direction: row;
-    width: 210px;
+    width: 300px;
     color: var(--dark-placeholder);
     font-size: 12px;
     align-items: center;
@@ -642,10 +642,11 @@
     height: 2px;
 }
 .ConfigureCheckout .Content .Checkout .Right .Content .TemplateTwo .Middle{
-    width: 30%;
+    width: 40%;
     font-size: 14px;
     color: gray;
     margin:4px 0px;
+    text-align: center;
 }
 .ConfigureCheckout .Content .Checkout .Right .Content .TemplateMiddle{
     color: black;
@@ -1006,7 +1007,7 @@
     width: fit-content;
     font-size: 13px;
     color: black;
-    margin-left: 180px;
+    margin-left: 135px;
     align-self: center;
 }
 
@@ -1640,7 +1641,7 @@
         width: fit-content;
         font-size: 13px;
         color: black;
-        margin-left: 130px;
+        margin-left: 80px;
         align-self: center;
     }
     
@@ -1725,7 +1726,7 @@
     .ConfigureCheckout .Content .Checkout .LightLeft .Price span{
         display: flex;
         align-self: center;
-        font-size: 38px;
+        font-size: 30px;
         margin-bottom: 25px;
         font-weight: 500;
     }
@@ -1824,7 +1825,7 @@
     .ConfigureCheckout .Content .Checkout .DarkLeft .Price span{
         display: flex;
         align-self: center;
-        font-size: 38px;
+        font-size: 30px;
         margin-bottom: 25px;
         font-weight: 500;
     }

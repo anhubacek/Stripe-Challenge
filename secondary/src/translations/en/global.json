@@ -1,6 +1,41 @@
 {
     "right":{
         "pay": "Pay",
-        "or-pay-with-card": "Or pay with card"
+        "or-pay-with-card": "Or pay with card",
+        "Shipping-information": "Shipping information",
+        "Email": "Email",
+        "Please-complete-your-email": "Please complete your email.",
+        "Please-enter-a-valid-email": "Please enter a valid email.",
+        "Shipping-Adress": "Shipping Adress",
+        "Name": "Name",
+        "Address": "Address",
+        "Enter-address-manually": "Enter address manually",
+        "Shipping-Method": "Shipping Method",
+        "United-States": "United States",
+        "Free-Shipping": "Free Shipping",
+        "5-7-business-days" : "5-7 business days",
+        "Free" : "Free",
+        "Next-day-air": "Next day air",
+        "1-business-days": "1 business days",
+        "Payment-details": "Payment details",
+        "Card-information": "Card information",
+        "Name-on-card": "Name on card",
+        "Country-or-region": "Country or region",
+        "Billing-address-is-same-as-shipping": "Billing address is same as shipping",
+        "Pay": "Pay",
+        "ZIP": "ZIP"
+    },
+    "left": {
+        "Pay-Rebill": "Pay Rebill",
+        "Qty": "Qty",
+        "Add-promotion-code": "Add promotion code",
+        "Shipping": "Shipping",
+        "Free-Shipping-(5-7-business-days)": "Free Shipping (5-7 business days)",
+        "Total-due": "Total due",
+        "Terms-privacy": "Terms privacy",
+        "$129": "USD $129,00",
+        "$65": "USD $65,00",
+        "$64": "USD $64,00",
+        "Free": "Free"
     }
 }
