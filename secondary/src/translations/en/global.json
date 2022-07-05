@@ -38,7 +38,8 @@
         "$64": "USD $64,00",
         "Free": "Free",
         "Next-day-air": "Next day air (At most 1 business day)",
-        "$15": "USD $15,00"
+        "$15": "USD $15,00",
+        "$total+shipping": "USD $144,00"
     }
     
 }

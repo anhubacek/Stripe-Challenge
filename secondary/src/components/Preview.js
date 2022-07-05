@@ -159,7 +159,7 @@ export default function Preview (){
                         </div>
                         <div className={options.coupons === "true"|| options.shipping === "true"? styles.CouponsBottom : styles.CouponsBottomHidden}>
                             <div className={styles.GrayTemplate}>{t("left.Total-due")}</div>
-                            <div className={styles.GrayTemplate}>{t("left.$129")}</div>
+                            <div className={styles.GrayTemplate}>{input.shippingMethod === "free" ? t("left.$129") : t("left.$total+shipping")}</div>
                         </div>
                         <div className={styles.Footer}>
                             <span>Powered by</span>
