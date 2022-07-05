@@ -4,6 +4,7 @@ import styles from '../styles/Preview.module.css'
 import {TrademarkCircleFilled, ArrowLeftOutlined, DownOutlined,
     CheckOutlined, LockFilled} from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
+import { Button, Modal, Space } from 'antd';
 
 
 export default function Preview (){
@@ -57,6 +58,22 @@ export default function Preview (){
      function changeLanguage(){
         i18n.changeLanguage(language)
      }
+
+
+     const success = (e) => {
+        if (input.email && input.email.match(
+            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i )){
+        Modal.success({
+            title: 'Payment Success',
+          content: 'After a successful payment, the customer returns to your website.',
+        });
+    } else {
+        Modal.error({
+            title: 'Payment Decline',
+            content: 'The customer needs to complete some information.',
+          });
+    }
+      };
     return(
         <div className={styles.ConfigureCheckout}>
             <div className={styles.Content}>
@@ -222,7 +239,9 @@ export default function Preview (){
                             <input type="checkbox"/>
                             <span>{t("right.Billing-address-is-same-as-shipping")}</span>
                             </div>
-                            <button className={styles.PayButton}>{t("right.Pay")}</button>
+                            {/* <button className={styles.PayButton}>{t("right.Pay")}</button> */}
+                             <Button onClick={success}  className={styles.PayButton} >{t("right.Pay")}</Button>
+                            
                         </div>
                         
                     </div>
