@@ -16,5 +16,5 @@ Ant Design
 ![First Step](/images/1step.jpeg)
 ![Configure](/images/2step.jpeg)
 ![Preview](/images/prevdesktop.jpeg)
-![Preview](/images/1prevmobile.jpeg)
+![Preview](/images/prevmobile.jpeg)
 ![Checkout](/images/checkout.jpeg)
