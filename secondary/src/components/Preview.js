@@ -23,7 +23,8 @@ export default function Preview (){
 
     const [input, setInput] = useState({
         email: "",
-        shippingMethod: "free"
+        shippingMethod: "free",
+        sameAddress: false,
     })
     console.log(input)
     const[language, setLanguage] =useState("en");
@@ -77,6 +78,21 @@ export default function Preview (){
           });
     }
       };
+
+    function handleCheck(e){
+        e.preventDefault();
+        if (e.target.checked){
+        setInput({
+            ...input,
+            [e.target.name] : true
+        })}
+        else {
+            setInput({
+                ...input,
+                [e.target.name] : false
+            })
+        }
+    }
     return(
         <div className={styles.ConfigureCheckout}>
             <div className={styles.Content}>
@@ -250,7 +266,7 @@ export default function Preview (){
                             <input type="text" placeholder={t("right.ZIP")} className={styles.Bottom}/>
                             </div>
                             <div className={options.shipping === "true" ? styles.Checked : styles.CheckedHidden}>
-                            <input type="checkbox"/>
+                            <input type="checkbox" name="sameAddress" onChange={handleCheck}/>
                             <span>{t("right.Billing-address-is-same-as-shipping")}</span>
                             </div>
                             {/* <button className={styles.PayButton}>{t("right.Pay")}</button> */}
