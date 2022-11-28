@@ -1,4 +1,4 @@
-# Rebill-Challenge
+# Stripe-Challenge
 El proyeto consiste en una simulación de la app de Stripe https://checkout.stripe.dev/ para configurar una página de checkout. El mismo esta compuesto de proyecto principal que recibe por iframe un proyecto secundario.
 
 Tecnologias utilizadas:
