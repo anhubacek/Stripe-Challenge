@@ -85,8 +85,8 @@ export default function Select() {
         <iframe
           src={
             option.oneTimePayments === true
-              ? "http://localhost:3001/onetimepayments"
-              : "http://localhost:3001/recurringpayments"
+              ? `${process.env.REACT_APP_EMBED_BASE_URL}onetimepayments`
+              : `${process.env.REACT_APP_EMBED_BASE_URL}recurringpayments`
           }
           title="Recurring-Payments"
           width="100%"

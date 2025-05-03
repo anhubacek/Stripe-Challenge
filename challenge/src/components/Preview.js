@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import styles from "../styles/preview.module.css";
+
+import { Popover } from "antd";
+import { useSearchParams } from "react-router-dom";
 import {
   ArrowLeftOutlined,
   MobileOutlined,
   InfoCircleFilled,
   DesktopOutlined,
 } from "@ant-design/icons";
-import { Popover } from "antd";
 
-import { useParams, useSearchParams } from "react-router-dom";
-import argFlag from "../images/arg.png";
+import styles from "../styles/preview.module.css";
+
 
 export default function Preview() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -65,7 +66,7 @@ export default function Preview() {
     setLanguage([e.target.value]);
   }
 
-  let iframeSource = `http://localhost:3001/preview${
+  let iframeSource = `${process.env.REACT_APP_EMBED_BASE_URL}preview${
     options.color === "dark" ? "?color=dark" : "?color=light"
   }${options.coupons === "true" ? "&coupons=true" : ""}${
     options.shipping === "true" ? "&shipping=true" : ""

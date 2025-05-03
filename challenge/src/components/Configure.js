@@ -202,7 +202,7 @@ export default function Configure() {
       </div>
       <div className={styles.App}>
         <iframe
-          src={`http://localhost:3001/configurecheckout${
+          src={`${process.env.REACT_APP_EMBED_BASE_URL}configurecheckout${
             options.color === "dark" ? "?color=dark" : "?color=light"
           }${options.coupons === true ? "&coupons=true" : ""}${
             options.shipping === true ? "&shipping=true" : ""
