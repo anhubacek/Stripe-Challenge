@@ -1,20 +1,19 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-
-:root{
-  --borderButtons1:rgb(214, 211, 211);
+:root {
+  --borderButtons1: rgb(214, 211, 211);
   --textDefault: rgb(78, 78, 78);
   --textGrey: rgb(100, 100, 100);
   --borderBlue: #5469d4;
@@ -28,23 +27,24 @@ code {
   --text-dark: #1a1f36;
   --icon-blue: #6c8eef;
   --icon-gray: #9ba2ad;
-  --outline-color: rgba(58,151,212,0.36);
+  --outline-color: rgba(58, 151, 212, 0.36);
   --outline-transition: box-shadow 0.2s ease;
   --standard-border-radius: 4px;
-  --border: 1px solid rgba(60,66,87,0.12);
-  --shadow-small: 0px 2px 5px rgba(60,66,87,0.12),0px 1px 1px rgba(0,0,0,0.08);
-  --shadow-button: 0px 2px 5px rgba(60,66,87,0.12),0px 1px 1px rgba(0,0,0,0.08),inset 0px -1px 1px rgba(0,0,0,0.12);
+  --border: 1px solid rgba(60, 66, 87, 0.12);
+  --shadow-small: 0px 2px 5px rgba(60, 66, 87, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.08);
+  --shadow-button: 0px 2px 5px rgba(60, 66, 87, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.08), inset 0px -1px 1px rgba(0, 0, 0, 0.12);
   --blue-mode: rgb(25, 37, 82);
   --white-blue-mode: rgb(255, 255, 255);
-  --placeholder: rgba(26,26,26,.1);
+  --placeholder: rgba(26, 26, 26, 0.1);
   --dark-placeholder: rgba(255, 255, 255, 0.199);
-
 }
-  
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
-@import '~antd/dist/antd.css';
 
-*{
-  transition: outline .2s ease;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
+@import "~antd/dist/antd.css";
+
+* {
+  transition: outline 0.2s ease;
 }

@@ -1,19 +1,18 @@
-.RecurringPayments{
-    display: flex;
-    background-color: rgb(245, 248, 250);
-    height: fit-content;
-    justify-content: center;
-    width: 100%;
-    min-height: 900px;
+.RecurringPayments {
+  display: flex;
+  background-color: rgb(245, 248, 250);
+  height: fit-content;
+  justify-content: center;
+  width: 100%;
+  min-height: 900px;
 }
 
-.RecurringPayments .Template{
-    display: flex;
-    height: fit-content;
-    justify-content: center;
+.RecurringPayments .Template {
+  display: flex;
+  height: fit-content;
+  justify-content: center;
 }
-.RecurringPayments .Template img{
-    width: 720px;
-    border-radius: 10px;
-   
+.RecurringPayments .Template img {
+  width: 720px;
+  border-radius: 10px;
 }
