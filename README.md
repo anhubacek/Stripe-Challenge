@@ -1,19 +1,26 @@
-# Stripe-Challenge
-El proyeto consiste en una simulación de la app de Stripe https://checkout.stripe.dev/ para configurar una página de checkout. El mismo esta compuesto de proyecto principal que recibe por iframe un proyecto secundario.
+# Stripe Checkout Demo
 
-Tecnologias utilizadas:
-<br>
-React.js
-<br>
-CSS puro
-<br>
-React 18 Next
-<br>
-Ant Design
+## 🚀 Project Overview
 
-Para probar la app se debe iniciar primero el proyecto del directorio Challenge en el puerto 3000 y luego el proyecto del directorio Secondary en el puerto 3001.
+This project was created in the context of a technical challenge.The main goal was to replicate the Stripe app (https://checkout.stripe.dev/) to configure a checkout page. It consists of a main project that embeds another project via an iframe and URL parameters to send information from one project to the other. Feel free to explore it!
 
-## Imágenes
+To test the app, you need to first start the project located in the `Challenge` directory on port 3000, and then start the project located in the `Secondary` directory on port 3001.
+
+**Link to the deploy:** https://stripe-challenge-anhubacek.vercel.app/
+
+---
+
+## 🛠️ Technologies
+
+- React.js
+- Javascript
+- CSS
+- React 18 Next
+- Ant Design
+
+---
+
+## 📸 Screenshots
 
 ![First Step](/images/1step.jpeg)
 ![Configure](/images/2step.jpeg)
